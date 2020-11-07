@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="css/grid.css">
+  
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/grid.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dota 2 - Diretide</title>
 </head>
 <body>
+
   <div id="navBarBGRepeat" class="DotaFont">
     <div id="navBarBG">
       <div id="navBar">
         <div id="navLoginAndLanguage">
           <a href="https://steamcommunity.com/oauth/login?client_id=9B2C1229&response_type=token&state=diretide">Iniciar sessão</a>
-          <span id="HeaderAdminSeparator" class="DotaFont">|</span>
+          <span id="HeaderAdminSeperator" class="DotaFont">|</span>
           <div id="languageSelector" class="DotaFont">
-            <a href="">Idioma</a>
+            <a href="javascript:void(0)">Idioma</a>
             <img style="margin-bottom: 2px;" src="img/small_arrow.png" alt="" width="5px" height="3px" border="0">
             <br>
             <div style="display: none;" id="languageList">
@@ -66,7 +68,7 @@
         </span>
         <span id="HeaderSeperator" class="DotaFont">|</span>
         <span class="navItem">
-          <a class="navBarItem DotaFont" href="">Heroipédia</a>
+          <a class="navBarItem DotaFont" href="javascript:void(0)">Heroipédia</a>
           <div style="display: none;" class="menuSubItemList">
             <a class="DotaFont" href="http://www.dota2.com/heroes/">Heróis</a>
             <a class="DotaFont" href="http://www.dota2.com/items/">Explorador de Itens</a>
@@ -78,6 +80,721 @@
           <img class="dn_arrow" src="img/arrow.png" alt="Arrow">
         </span>
       </div>
+    </div>
+  </div>
+
+  <script language="javascript">
+    function MM_preloadImages() { //v3.0
+      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		  if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	  }
+
+	  function PreloadHeaderImages()
+	  {
+      //  Preload header rollover images
+      //MM_preloadImages(
+      //);
+	  }
+
+			if ( document.addEventListener ) {
+		document.addEventListener( "DOMContentLoaded", PreloadHeaderImages, false );
+	} else if ( document.attachEvent ) {
+		document.attachEvent( 'onDomContentLoaded', PreloadHeaderImages );
+	}
+  </script>
+
+  <script language="javascript">
+    function closeSubMenu( target ) {
+			$(target).find('.dn_arrow').attr( "src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow.png" );
+			$(target).find('.menuSubItemList').hide();
+		}
+
+		function closeAllSubMenus() {
+			$('.navItem').each( function() {
+				closeSubMenu( $(this) );
+			});
+		}
+
+		function openSubMenu( target ) {
+			closeAllSubMenus();
+
+			$(target).find('.dn_arrow').attr( "src", "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/nav/arrow_over.png" );
+
+			// Show the sub-menu
+			var subItemList = $(target).find('.menuSubItemList');
+			if ( subItemList.length ) {
+				var itemTop = $(target).position().top + $(target).outerHeight() + 24;
+				var itemLeft = $(target).position().left;
+				subItemList
+					.css({
+						"top": itemTop + 'px',
+						"left": itemLeft
+					})
+					.fadeIn( 'fast' );
+			}
+		}
+
+		$(document).ready( function () {
+			// Deal with the nav bars
+			$('.navItem').each( function() {
+				$(this).hover( function () {
+					$(this)
+						.find('a.navBarItem img.top')
+						.animate({
+							"opacity": 1
+						}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						openSubMenu( this );
+					}
+				},
+				function () {
+					$(this)
+					.find('a.navBarItem img.top')
+					.animate({
+						"opacity": 0
+					}, 100 );
+					if ( $(this).find('.menuSubItemList').length !== 0 ) {
+						closeSubMenu(this);
+					}
+				}
+				);
+			});
+
+			// Deal with header drop-downs
+			var strMenus = '#languageSelector';
+			
+			$(strMenus).each( function() {
+				$(this).hover( function () {
+					//show its submenu
+					$( this ).find( 'div' ).fadeIn( 'fast' );
+				},
+				function () {
+					//hide its submenu
+					$( this ).find( 'div' ).hide();
+				}
+				);
+			});
+		});
+  </script>
+
+  <div class="page-contain parallax_wrapper">
+    <div id="MobileNav">
+      <div id="MobileNavLogo">
+        <img class="logo-mobile" src="img/header_dota2_logo.png" alt="Logo">
+      </div>
+      <div id="BackToDota" class="body-sm">
+        <a href="https://www.dota2.com">Voltar para Dota2.com</a>
+      </div>
+    </div>
+
+    <div id="header_youtube_embed">
+      <iframe id="qop_arcana_video_embed" src="https://www.youtube.com/embed/Nr4C2Mb_Bao?rel=0&autoplay=0&controls=1&enablejsapi=1&origin=http%3A%2F%2Fwww.dota2.com&widgetid=1" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="Youtube video player" width="640" height="360">
+        #document
+      </iframe>
+    </div>
+
+    <div class="header_parallax">
+      <div class="outer hero-bg parallax_bg">
+        <video autoplay preload="auto" muted loop playsinline class="header_image_video" poster="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_header.jpg">
+          <source type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/diretide2020/diretide_roshan.webm">
+          <source type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/diretide2020/diretide_roshan.mp4">
+        </video>
+        <div id="GradientOverlayBottom"></div>
+      </div>
+      <div class="parallax_mg" id="GradientOverlayFogLayer"></div>
+    </div>
+
+    <div class="feature-logo">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_logo_bg_en.png" alt="" class="title-bg">
+      <div class="play-trailer-btn">
+        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/play_btn_active.png" alt="">
+        <br>
+        <div class="playtext">Assistir ao trailer</div>
+      </div>
+    </div>
+
+    <div class="outer lore-bg">
+      <div class="lore-bg-img"></div>
+      <div id="GradientOverlayTop"></div>
+      <img class="feature-img" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/diretide_cauldron.png" alt="">
+      <div class="wave-bg aos-init" data-aos="fade-up" data-aos-duration="1000"></div>
+      <div class="lore-content container">
+        <div class="lore-top">
+          <div class="row lore-spacer">
+            <div class="col-2 relative">
+              <picture>
+                <source srcset="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/null.png" media="(max-width:720px)">
+                <img data-aos="fade-right" data-aos-duration="1000" class="lore-img lore1 aos-init" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/candy_left.png" alt="">
+              </picture>
+            </div>
+            <div class="col-8 left lore-contain">
+              <div class="lore-intro">Nas florestas... ele acordou.</div>
+              <div class="lore-body first-line">
+                Lascas da Lua Insana pairam pelo céu noturno. Da primavera, chega o verão. Em seguida, o outono... As estações vêm e vão, deixadas de lado pela batalha incessante entre Iluminados e Temidos. Já faz muito tempo que não paramos para observar a floresta. Onde está a temporada do Diretide? Nós uivamos para a floresta, implorando para que ela trouxesse a fera louca por doces. Mas nada veio. Então seguimos em frente.
+              </div>
+              <div class="lore-body">
+                Agora, no entanto, as árvores estremecem. Os caramelos nas nossas cestas dançam com o tremor sob os nossos pés. Será que...?
+              </div>
+              <div class="dota-copy">
+                Preparem-se para um evento especial de Dota 2. Roshan sai da sua caverna, descendo pelo rio, sedento por doces e sangue. Rodadas e mais rodadas de um novo (e frenético) modo de jogo cinco contra cinco os aguarda. Atenção: a temporada voltou. É o Diretide.
+              </div>
+            </div>
+            <div class="col-2 relative">
+              <picture>
+                <source srcset="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/null.png" media="(max-width: 720px)">
+                <img data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" class="lore-img lore2 aos-init" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/lore-right2.png" alt="">
+              </picture>
+            </div>
+          </div>
+          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/give_diretide.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="outer customgame-bg padding-lg">
+      <div class="diretide-divider-top"></div>
+      <div class="diretide-divider-bottom"></div>
+      <div class="container">
+        <div class="row spacer-xxl-top customgame-intro">
+          <div class="col-12 center">
+            <div class="section-label">Evento especial</div>
+            <div class="section-intro">Participe das travessuras festivas</div>
+            <div class="desc-body">
+              As florestas tremem perante o retorno do modo de jogo sazonal do Diretide! Junte a sua equipe e colete os seus doces nesta disputa em melhor de cinco — mas cuidado com a fera, pois a fome de Roshan por Caramelos de Greevil só cresceu.
+            </div>
+          </div>
+        </div>
+        <div class="row spacer-lg">
+          <div class="col-6 howtoplay-section mobile-howtoplay">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-1.png" alt="" class="howtoplay-img fullwidth">
+          </div>
+          <div class="col-6 center howtoplay-desc aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-intro-sm">Colete caramelos</div>
+            <div class="desc-body">
+              O relógio não para e o balde da sua equipe precisa ser enchido! Abata as criaturas para pegar os seus caramelos. A colheita deve ser rápida!
+            </div>
+          </div>
+          <div class="col-6 howtoplay-section desktop-howtoplay">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-1.png" alt="" class="howtoplay-img fullwidth">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 howtoplay-section">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-2.png" alt="" class="howtoplay-img fullwidth">
+          </div>
+          <div class="col-6 center howtoplay-desc aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-intro-sm">Encha o seu balde</div>
+            <div class="desc-body">
+              Acumule pilhas de caramelo do seu lado, mas cuidado com as roubalheiras e travessuras dos seus inimigos. Movidos pela ganância, eles farão de tudo para roubar os seus doces!
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 howtoplay-section mobile-howtoplay">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-3.png" alt="" class="howtoplay-img fullwidth">
+          </div>
+          <div class="col-6 center howtoplay-desc aos-init" data-aos="fade=up" data-aos-duration="1000">
+            <div class="section-intro-sm">Sacie a fera</div>
+            <div class="desc-body">
+              A fome de Roshan não pode ser ignorada. Somente os caramelos nos seus bolsos e o seu espírito altruísta evitará a morte iminente.
+            </div>
+          </div>
+          <div class="col-6 howtoplay-section desktop-howtoplay">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-3.png" alt="" class="howtoplay-img fullwidth">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Rewards" class="outer candy-bg padding-lg">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/web_kid_invoker.png" alt="" class="invoker-img">
+      <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/invoker_orbs.png" alt="" class="invoker-img invoker-orbs">
+
+      <div class="container">
+        <div class="row rewards-section-spacer">
+          <div class="col-2"></div>
+          <div class="col-8 center aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <div class="section-intro">Recompensas adocicadas</div>
+            <div class="desc-body">
+              Durante a temporada do Diretide, jogadores obterão Direpontos ao disputar partidas normais de Dota e no modo de jogo do Diretide. A cada 100 Direpontos, você receberá uma das recompensas de Roshan.
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row">
+          <div class="col-4 center-spacer-lg-top reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/calabaxa.png" alt="" class="reward-img">
+            <div class="reward-name">Rastejabóbora</div>
+            <div class="reward-label">Entregador do Diretide</div>
+          </div>
+          <div class="col-4 center reward-container aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/new_treasure.png" alt="" class="reward-img">
+            <div class="reward-name">Tronco premiado do Diretide</div>
+            <div class="reward-label">Novo tesouro do Diretide</div>
+          </div>
+          <div class="col-4 center spacer-xl-top reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/shader.png" alt="" class="reward-img">
+            <div class="reward-name">Efeito sombreamento do Diretide</div>
+            <div class="reward-label">Compartimento global</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 center-spacer-lg-top reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/diretide_wards.png" alt="" class="reward-img">
+            <div class="reward-name">Bicos e Bolhas</div>
+            <div class="reward-label">Sentinela do Diretide</div>
+          </div>
+          <div class="col-4 center reward-container aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/costumes.png" alt="" class="reward-img">
+            <div class="reward-name">Pacotes de brilho sazonais</div>
+            <div class="reward-label">2 pacotes, 21 heróis</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-4 center spacer-xl-top reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/diretide_courier.png" alt="" class="reward-img">
+            <div class="reward-name">Mumim</div>
+            <div class="reward-label">Entregador do Diretide</div>
+          </div>
+        </div>
+        <div class="row spacer-sm">
+          <div class="col-4 center spacer-lg-top reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/pumpkin_head.png" alt="" class="reward-img">
+            <div class="reward-name">Cabeça de Abóbora</div>
+            <div class="Todos os heróis"></div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-4 center reward-container aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/ghost_courier.png" alt="" class="reward-img">
+            <div class="reward-name">Efeito de Entregador Fantasma</div>
+            <div class="reward-label">Compartimento global</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-4 center spacer-xl-top reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/megakill.png" alt="" class="reward-img">
+            <div class="reward-name">Matanças do Diretide</div>
+            <div class="reward-label">Locutor de matanças</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 center reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/chatlines.png" alt="" class="reward-img">
+            <div class="reward-name">Mensagens e efeitos sonoros</div>
+            <div class="reward-label">13 no total</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-4 center reward-container aos-init" data-aos="fade-up" data-aos-duration="1000" >
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/killstreak.png" alt="" class="reward-img">
+            <div class="reward-name">Sequência de vítimas do Diretide</div>
+            <div class="reward-label">Efeito de sequência de vítimas</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-4 center spacer-sm-top reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/high_five.png" alt="" class="reward-img">
+            <div class="reward-name">"Toca aqui" assustador</div>
+            <div class="reward-label">Efeito de "toca aqui"</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 center spacer-lg-top reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/random_item.png" alt="" class="reward-img">
+            <div class="reward-name">Item misterioso</div>
+            <div class="reward-label">Conjunto ou item aleatório</div>
+          </div>
+          <div class="col-4 center spacer-lg-top reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" >
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/cursors.png" alt="" class="reward-img">
+            <div class="reward-name">Cursores do Diretide</div>
+            <div class="reward-label">Pacote de cursores</div>
+          </div>
+          <div class="col-4 center reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/diretide_chest.png" alt="" class="reward-img">
+            <div class="reward-name">Baú Sagrado do Diretide</div>
+            <div class="reward-label">Tesouro repaginado</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-3 center reward-container reward-courier aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/mmr.png" alt="" class="reward-img">
+            <div class="reward-name">Fichas de MMR em dobro</div>
+            <div class="reward-label">Uso único</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-3 center spacer-lg-top reward-container reward-costumes aos-init" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/emotes.png" alt="" class="reward-img">
+            <div class="reward-name">Emoticons assustadores</div>
+            <div class="reward-label">Dez no total</div>
+          </div>
+          <div class="col-3 center reward-container aos-init" data-aos="fade-up" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/sprays.png" alt="" class="reward-img">
+            <div class="reward-name">Pinturas assustadoras</div>
+            <div class="reward-label">Dez no total</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+          <div class="col-3 center reward-container reward-courier spacer-lg-top aos-init" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/rewards/kill_effect.png" alt="" class="reward-img">
+            <div class="reward-name">Efeitos de morte do Diretide</div>
+            <div class="reward-label">Efeito de morte</div>
+            <div class="reward-seasonal">Sazonal</div>
+          </div>
+        </div>
+        <div class="row spacer-lg">
+          <div class="col-12 center">
+            <div class="section-intro-sm">Mais de 75 gostosuras, quais você obterá?</div>
+            <div class="desc-body">
+              O rugido de Roshan ecoa entre a floresta, causando calafrios na sua espinha, estremecendo o seu esqueleto e premiando o seu rostinho em pânico.
+            </div>
+            <div class="filters filter-button-group">
+              <ul>
+                <li data-filter="*" class="active">
+                  <a href="javascript:void(0);" data-filter="*">Tudo</a>
+                </li>
+                <li data-filter="cosmetic">
+                  <a href="javascript:void(0);" data-filter="cosmetic">Itens e conjuntos</a>
+                </li>
+                <li data-filter="effects">
+                  <a href="javascript:void(0);" data-filter="effects">Interface e efeitos</a>
+                </li>
+                <li data-filter="treasures">
+                  <a href="javascript:void(0);" data-filter="treasures">Tesouros</a>
+                </li>
+                <li data-filter="sfx">
+                  <a href="javascript:void(0);" data-filter="sfx">Sons</a>
+                </li>
+                <li data-filter="sprayemote">
+                  <a href="javascript:void(0);" data-filter="sprayemote">Pinturas e emoticons</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="container" class="container isotope">
+        <div class="grid-item" data-filter="effects" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/shader.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/shader.jpg" alt="">
+          </a>
+          <div class="overlay">Efeito de sombreamento do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="treasures" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/hallowed_chest.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/hallowed_chest.jpg" alt="">
+          </a>
+          <div class="overlay">Baú Sagrado do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/lycan.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/lycan.jpg" alt="">
+          </a>
+          <div class="overlay">Lycan</div>
+        </div>
+        <div class="grid-item" data-filter="treasures" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/diretide_treasure.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/diretide_treasure.jpg" alt="">
+          </a>
+          <div class="overlay">Tronco Premiado do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="effects" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/highfive.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/highfive.jpg" alt="">
+          </a>
+          <div class="overlay">"Toca aqui" assustador</div>
+        </div>
+        <div class="grid-item" data-filter="effects" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/cursors.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/cursors.jpg" alt="">
+          </a>
+          <div class="overlay">Cursores do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/mars.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/mars.jpg" alt="">
+          </a>
+          <div class="overlay">Marte</div>
+        </div>
+        <div class="grid-item" data-filter="effects" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/killstreak.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/killstreak.jpg" alt="">
+          </a>
+          <div class="overlay">Sequência de vítimas do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="effects" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/death_effect.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/death_effect.jpg" alt="">
+          </a>
+          <div class="overlay">Efeitos de morte do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/pumpkin_head.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/pumpkin_head.jpg" alt="">
+          </a>
+          <div class="overlay">Cabeça de Abóbora</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/spooky.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/spooky.jpg" alt="">
+          </a>
+          <div class="overlay">Entregador do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/mummies.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/mummies.jpg" alt="">
+          </a>
+          <div class="overlay">Mumim</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/ravens.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/ravens.jpg" alt="">
+          </a>
+          <div class="overlay">Bicos e Bolhas</div>
+        </div>
+        <div class="grid-item" data-filter="sfx" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/audio/muahaha.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/audio/muahaha.jpg" alt="">
+          </a>
+          <div class="overlay">Muahahahaha</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/meepo.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/meepo.jpg" alt="">
+          </a>
+          <div class="overlay">Meepo</div>
+        </div>
+        <div class="grid-item" data-filter="sfx" data-page="1">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/megakill.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/misc/megakill.jpg" alt="">
+          </a>
+          <div class="overlay">Matanças do Diretide</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/pudge.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/pudge.jpg" alt="">
+          </a>
+          <div class="overlay">Pudge</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/slardar.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/slardar.jpg" alt="">
+          </a>
+          <div class="overlay">Slardar</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/axe.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/axe.jpg" alt="">
+          </a>
+          <div class="overlay">Axe</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/lifestealer.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/lifestealer.jpg" alt="">
+          </a>
+          <div class="overlay">Lifestealer</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/dark_willow.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/dark_willow.jpg" alt="">
+          </a>
+          <div class="overlay">Dark Willow</div>
+        </div>
+        <div class="grid-item" data-filter="sprayemote" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sprays/cat_1.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sprays/cat_1.jpg" alt="">
+          </a>
+          <div class="overlay">Gato assustador</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/clockwork.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/clockwork.jpg" alt="">
+          </a>
+          <div class="overlay">Clockwerk</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/tidehunter.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/tidehunter.jpg" alt="">
+          </a>
+          <div class="overlay">Tidehunter</div>
+        </div>
+        <div class="grid-item">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/treeant_protector.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/treeant_protector.jpg" alt="">
+          </a>
+          <div class="overlay">Treant Protector</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/alchemist.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes1/alchemist.jpg" alt="">
+          </a>
+          <div class="overlay">Alchemist</div>
+        </div>
+        <div class="grid-item" data-filter="sprayemote" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/emotes/ghost.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/emotes/ghost.jpg" alt="">
+          </a>
+          <div class="overlay">Fantasma</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/enchantress.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/enchantress.jpg" alt="">
+          </a>
+          <div class="overlay">Enchantress</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/bloodseeker.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/bloodseeker.jpg" alt="">
+          </a>
+          <div class="overlay">Bloodseeker</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/centaur_warrunner.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/centaur_warrunner.jpg" alt="">
+          </a>
+          <div class="overlay">Centaur Warrunner</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/dazzle.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/dazzle.jpg" alt="">
+          </a>
+          <div class="overlay">Dazzle</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="2">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/legion_commander.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/legion_commander.jpg" alt="">
+          </a>
+          <div class="overlay">Legion Commander</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/luna.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/luna.jpg" alt="">
+          </a>
+          <div class="overlay">Luna</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/magnus.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/magnus.jpg" alt="">
+          </a>
+          <div class="overlay">Magnus</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/naga_siren.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/naga_siren.jpg" alt="">
+          </a>
+          <div class="overlay">Naga Siren</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/skywrath_mage.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/skywrath_mage.jpg" alt="">
+          </a>
+          <div class="overlay">Skywrath Mage</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/drow_ranger.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/costumes2/drow_ranger.jpg" alt="">
+          </a>
+          <div class="overlay">Drow Ranger</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/lich.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/shadow_fiend.jpg" alt="">
+          </a>
+          <div class="overlay">Shadow Fiend</div>
+        </div>
+        <div class="grid-item" data-filter="comestic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/lich.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/lich.jpg" alt="">
+          </a>
+          <div class="overlay">Lich</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/death_prophet.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/death_prophet.jpg" alt="">
+          </a>
+          <div class="overlay">Death Prophet</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/nightstalker.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/nightstalker.jpg" alt="">
+          </a>
+          <div class="overlay">Night Stalker</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/timbersaw.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/timbersaw.jpg" alt="">
+          </a>
+          <div class="overlay">Timbersaw</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/wraith_king.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/wraith_king.jpg" alt="">
+          </a>
+          <div class="overlay">Wraith King</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/pudge.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/pudge.jpg" alt="">
+          </a>
+          <div class="overlay">Pud</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/chaos_knight.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/chaos_knight.jpg" alt="">
+          </a>
+          <div class="overlay">Chaos Knight</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/pumpkins.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/pumpkins.jpg" alt="">
+          </a>
+          <div class="overlay">Entregador Abóbora</div>
+        </div>
+        <div class="grid-item" data-filter="cosmetic" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/riki.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/sets/riki.jpg" alt="">
+          </a>
+          <div class="overlay">Riki</div>
+        </div>
+        <div class="grid-item" data-filter="sprayemote" data-page="3">
+          <a class="popupimg" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/emotes/big_brain.jpg">
+            <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/emotes/big_brain.jpg" alt="">
+          </a>
+          <div class="overlay">Sabe-tudo</div>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+      </div>
+      <div class="isotope-pager-spacer-bottom" style="padding-top: 15px; text-align: center;"></div>
     </div>
   </div>
 </body>

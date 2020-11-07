@@ -1,3 +1,4 @@
+/* publicheader brazilian */
 * {
   font-family: 'Radiance';
   line-height: normal;
@@ -379,4 +380,4163 @@ a.navBarItem:hover {
   -webkit-transition:.3s;
   transition:.3s;
 	font-family: 'Radiance';
+}
+
+/* diretide2020 brazilian */
+@media only screen and (min-width: 70em) { /* 960px */
+  .container {
+    width: 75%;
+    max-width: 90rem;
+  }
+}
+
+body {
+  background-color: #000;
+  font-family: 'Radiance', serif;
+  overflow: hidden;
+}
+
+.row {
+  position: relative;
+}
+
+#navBarBGRepeat {
+  height: auto;
+  box-shadow: 0px 2px 10px #000;
+}
+
+#MobileNav {
+  width: 100%;
+  background-color: #222;
+  border-bottom: 1px solid #444;
+  box-shadow: 2px 2px 15px #000;
+  z-index: 1000;
+  display: none;
+  padding: 10px 20px 6px 20px;
+  min-height: 56px;
+}
+
+#MobileNavLogo {
+  margin: 0 auto;
+  float: left;
+  max-width: 120px;
+}
+
+#MobileNavLogo Image {
+  max-width: 100px;
+}
+
+.logo-mobile {
+  max-width: 150px;
+  padding-top: 3px;
+}
+
+#BackToDota {
+  font-size: 12px;
+  color: #999;
+  float: right;
+  margin-top: 5px;
+  text-shadow: none;
+  text-decoration: underline;
+}
+
+#BackToDota a:hover {
+  color: #999 !important; 
+}
+
+@media only screen and (max-width: 900px) {
+  #navBarBGRepeat {
+    display: none;
+  }
+  #MobileNav {
+    display: block;
+  }
+}
+
+.included-content {
+  position: relative;
+  z-index: 10;
+}
+
+.title-inline {
+  width: 100%;
+}
+
+.relative {
+  position: relative;
+}
+
+#GradientOverlayFogLayer {
+  display: none;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8F754F00), color-stop(40%, #8F754F66), color-stop(80%, #8F754F99), color-stop(100%, #8F754Fff));
+  width: 100%;
+  z-index: -1;
+  width: 100vw;
+  max-height: 500px;
+  object-fit: contain;
+  transform: translateZ(-0.35px) scale(1.85);
+  bottom: 250px;
+  user-select: none;
+  pointer-events: none;
+}
+
+#GradientOverlayBottom {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0.3)), color-stop(80%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 1)));
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  bottom: 0px;
+  position: absolute;
+  height: 300px;
+  pointer-events: none;
+}
+
+#GradientOverlayTop {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0.3)), color-stop(80%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 1)));
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  top: 0px;
+  position: absolute;
+  height: 300px;
+}
+
+#GradientOverlayRight {
+  background-image: linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0));
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  bottom: 0px;
+  user-select: none;
+}
+
+.parallax_wrapper {
+  height: 100%;
+  perspective: 1px;
+  -webkit-perspective: 1px;
+  perspective-origin: 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page-contain {
+  overflow-x: hidden;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.fullwidth-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  /*min-widht: 100%;*/
+  height: 100%;
+  min-height: 100%;
+  max-height: 1200px;
+  transform: translateX(-50%) translateY(0%);
+  overflow-x: hidden;
+  z-index: 4;
+  animation: fade-in 2s ease-in-out;
+  user-select: none;
+  z-index: -1;
+}
+
+.chest-video {
+  position: relative;
+  top: -100px;
+  left: 50%;
+  width: auto;
+  /*min-width: 100%;*/
+  height: 100%;
+  /*min-height: 100%;*/
+  max-height: 1200px;
+  transform: translateX(-50%) translateY(0%);
+  overflow-x: hidden;
+  z-index: 4;
+  animation: fade-in 2s ease-in-out;
+  user-select: none;
+  z-index: 0;
+}
+
+.header_fg {
+  width: 100vw;
+  min-width: 1440px;
+  max-height: 50vh;
+  object-position: center;
+  object-fit: contain;
+  user-select: none;
+}
+
+.parallax_front {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform-origin: 0 0;
+  transform: translateY(-95vh) translateZ(-0.15px) scale(1.15);
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.header_front {
+  width: 100vw;
+  min-width: 2275px;
+  max-height: 50vh;
+  object-position: center;
+  object-fit: contain;
+  user-select: none;
+}
+
+.parallax_bg {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; /* firefox requires this for children */
+  z-index: -1;
+	transform-origin: 0 0;
+	/*transform: translateZ(-1px) scale(2);*/
+	overflow-y: auto;
+	height: 100%;
+	user-select: none;
+}
+
+.header_parallax {
+
+}
+
+.parallax_mg {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform-origin: 0 0;
+  transform: translateY(-35vh) translateZ(-0.35px) scale(1.35);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.parallax_rocks {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform-origin: 0 0;
+  transform: translateY(-35vh) translateZ(-0.1px) scale(1.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+}
+
+.parallax_map_section {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: -1;
+  transform-origin: 0 0;
+  transform: translateZ(-0.35px) scale(1.35);
+  overflow-y: auto;
+  height: 100%;
+  width: 93%;
+  user-select: none;
+}
+
+#AlternateStyle, #AlternateStyleMapContainer {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  user-select: none;
+}
+
+#AlternateStyle {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#MapCenterer {
+  height: 100%;
+  width: 10px;
+  position: relative;
+  overflow: visible;
+  user-select: none;
+}
+
+#AlternateStyleMapContainer {
+  position: relative;
+  min-width: 1960px;
+  flex: 1;
+  height: 50vw;
+  min-height: 992px;
+  max-height: 1100px;
+}
+
+#AlternateStyleMapContainer:before {
+  content: '';
+  height: 100%;
+  width: 128px;
+  background: -webkit-linear-gradient(to right, #704b2d, #704B2D00);
+  background: linear-gradient(to right, #704B2D, #704B2D00);
+	position: absolute;
+	left: 0px;
+}
+
+#AlternateStyleMapContainer:after {
+  content: '';
+  height: 100%;
+  width: 50%;
+  background: -webkit-linear-gradient(to left, #2e0900, #9E946F00);
+	background: linear-gradient(to left, #2e0900, #9E946F00);
+	position: absolute;
+	right: 0px;
+}
+
+#AlternateStyleDetailsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 64px 32px;
+  z-index: 10;
+  width: 1440px;
+  max-width: 100vw;
+}
+
+.AltStyleVignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  background: -webkit-linear-gradient(to bottom, #0008, #0000 15%, #0000 75%,  #000a);
+	background: linear-gradient(to bottom, #0008, #0000 15%, #0000 75%,  #000a);
+}
+
+#AlternateStyleDetails {
+  width: 100%;
+  height: 100%;
+  font-family: 'Radiance', "Microsoft Yahei", "STHeiti", system, sans-serif;
+  color: #fff;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  max-width: 1440px;
+}
+
+#DetailsLeft {
+  flex: 3;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 24px;
+}
+
+.DetailsRight {
+  flex: 1;
+  user-select: initial;
+  position: relative;
+}
+
+#ParallaxMap_01 {
+  transform: translateY(-43%) translateZ(-0.5px) scale(1.6);
+}
+#ParallaxMap_02 {
+  transform: translateY(-12%) translateZ(-0.4px) scale(1.5);
+}
+#ParallaxMap_03 {
+  transform: translateY(38%) translateZ(-0.3px) scale(1.4);
+}
+#ParallaxMap_04 {
+  transform: translateY(50%) translateZ(-0.2px) scale(1.3);
+}
+
+.parallax_fg {
+  height: 50vh;
+  margin-top: -47vh;
+  position: relative;
+}
+
+.hero-space {
+  height: 450px;
+  width: 100%;
+}
+
+.hero-content {
+  z-index: 10;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 80vw;
+  /*min-width: 100%;*/
+  transform: translateX(-50%) translateY(0%);
+  animation: fade-in 2s ease-in-out;
+}
+
+.subhead {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fefefe;
+  letter-spacing: 8px;
+  font-weight: lighter;
+  text-align: center;
+  user-select: initial;
+  transform: translateY(-25px);
+  text-shadow: 1px 1px 8px black;
+}
+
+.subhead span {
+  font-weight: 800;
+  text-shadow: 1px 1px 18px 3.0 black;
+}
+
+.play-trailer-btn {
+  z-index: 300;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  top: 230px;
+}
+
+.playtext {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  transform: translateY(-30px);
+  font-size: 18px;
+  transition-duration: 0.2s;
+  display: inline-block;
+  font-family: 'Reaver', serif;
+  font-weight: 600;
+  color: #BAE816;
+  background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+  -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.play-btn {
+  width: 160px;
+  transition-duration: 0.2s;
+}
+
+.play-trailer-btn:hover .play-btn {
+  transform: scale(1.3);
+  /*filter: hue-rotate(90deg);*/
+}
+
+.play-trailer-btn:hover .playtext {
+  transform: scale(1.3);
+}
+
+.hero_name {
+  letter-spacing: 20px;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-transform: uppercase;
+  font-family: 'Goudy Trajan', serif;
+  color: #d5ad6d;
+  font-weight: bold;
+  background: -webkit-linear-gradient(top, #ffffff, #46a9b5);
+	background: linear-gradient(top, #ffffff, #46a9b5);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/*text-shadow: 3px 3px 0px #345959;*/
+	position: relative;
+}
+
+.hero_name:after {
+  background: none;
+  content: attr(data-text);
+  left: 2px;
+  position: absolute;
+  text-shadow: 3px 3px 0px #345959;
+  left: 50%;
+  transform: translateX(-50%) translateY(0%);
+  /*text-shadow: 0 0 3px #ff0000, 6px 6px 9px rgba(0, 0, 0, 0.33);*/
+}
+
+#SectionLg {
+  width: 100%;
+  height: 205px;
+  padding: 2px 0px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/ti10_battlepass_bar.jpg");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  position: relative;
+  z-index: 80;
+  box-shadow: 0px 0px 40px #000;
+}
+
+#SectionLgBtm {
+  width: 100%;
+  height: 205px;
+  padding: 2px 0px;
+  /*margin-top: 96px;*/
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/ti10_battlepass_bar.jpg");
+	background-position: center;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	position: relative;
+	z-index: 80;
+	box-shadow: 0px 0px 40px #000000;
+}
+
+.sideRocks {
+  position: absolute;
+}
+
+.sideRocks img {
+  height: 100%;
+}
+
+#RocksRightFooter, #RocksRight {
+  height: 304px;
+  top: -81px;
+  right: 0px;
+  user-select: none;
+  pointer-events: none;
+}
+
+#RocksLeftFooter,
+#RocksLeft {
+	top: -60px;
+	left: 0px;
+	width: 350px;
+	height: 304px;
+	user-select: none;
+	pointer-events:none;
+}
+
+.BP-logo-sm {
+  max-width: 400px;
+  /*margin-bottom: 10px;*/
+  width: 100%;
+}
+
+#Variant {
+  width: 100%;
+  background-color: #000;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/variant-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  position: relative;
+  overflow: visible;
+  z-index: 10;
+}
+
+.DetailsLeft .variant-text {
+  padding: 0;
+}
+
+.variant-text {
+  padding: 100px 0px 100px 0px;
+}
+
+.variant-label {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #eeab60;
+	color: #ffffff;
+	letter-spacing: 4px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	/*text-shadow: 0px 0px 5px #d36126;*/
+}
+
+.variant-intro {
+	font-size: 46px;
+	line-height: 40px;
+	font-weight: bold;
+	letter-spacing: 5px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	text-align: left;
+	text-shadow: 2px 2px 10px #c75826;
+}
+
+.variant-body {
+	font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #ebebeb;
+	
+}
+
+.variant-body.wkalt {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-weight: bold;
+}
+
+
+.variant-body-sm {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #ebebebe0;
+	position: relative;
+	text-shadow: 2px 2px #000;
+	margin-top: 10px;
+}
+
+.variant-combo {
+	width: 150%;
+	right: 0px;
+	transform: translateX(-100px);
+}
+
+.variant {
+	width: 100%;
+	/*max-width: 500px;*/
+	/*transform: translateY(-80px);*/
+}
+
+.immortal-img-contain {
+	position: relative;
+}
+
+.immortal {
+	background-color: rgba(0,0,0,0.6);
+	width: 100%;
+	/*position: absolute;*/
+	/*bottom: 0px;*/
+	/*left: 0px;*/
+	overflow: visible;
+}
+
+.immortal-text {
+	max-width: 900px;
+	text-align: center;
+	padding: 0px 20px;
+	z-index: 5;
+	position: relative;
+
+}
+
+.immortal-img {
+	position: absolute;
+	top: -150px;
+	right: 0px;
+	opacity: 1;
+	max-width: 300px;
+	width: 250%;
+}
+
+
+.hero-img {
+	opacity: 1;
+	width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	max-width: 1800px;
+	overflow: hidden;
+	left: 50%;
+	transform: translate(-50%, 0%);
+}
+
+
+.buy_button {
+	padding: 12px 20px;
+	background: -webkit-linear-gradient(top, rgb(214, 131, 54), rgb(255, 208, 81));
+	background: linear-gradient(top, rgb(214, 131, 54), rgb(255, 208, 81));
+	/*border-top: 1px solid rgb(255, 244, 180);*/
+	background: linear-gradient(270deg, #4F3612 -0.06%, #8E601B 22.03%, #C79123 49.97%, #E4C269 100%);
+	width: 100%;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-shadow: 2px 0px 8px #000000;
+	box-shadow: 2px 2px 10px #000000;
+	text-align: center;
+	margin-top: 20px;
+	opacity: 1;
+	border-radius: 3px;
+	margin: 0 auto;
+	position: inline-block;
+	cursor: pointer;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+ }
+
+.buy_button:hover {
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #d8baff,  0px 0px 10px #d8baff;
+	filter: brightness(1.2);
+	transform: scale(1.05);
+	/*box-shadow: 0px 0px 20px #d8baff;*/
+	box-shadow: 2px 2px 30px #000000;
+}
+
+.button_left {
+	background: linear-gradient(270deg, #4F3612 -0.06%, #8E601B 22.03%, #C79123 49.97%, #E4C269 100%);
+	background: linear-gradient(270deg, #E4C269 -0.06%, #C79123 49.97%, #8E601B 73.78%, #4F3612 100%);
+}
+
+/*  =======================================>
+@keyframes 'GlowyButton'
+{
+	0%		{ background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, from( #54efff ), to( transparent ) ); }
+	100%	{ background-color: gradient( radial, 50% 50%, 0% 0%, 50% 50%, from( #54efff ), to( transparent ) ); }
+} */
+
+.lore-text {
+  font-size: 22px;
+  line-height: 34px;
+  text-shadow: 1px 1px 5px #000;
+  position: relative;
+  z-index: 5;
+}
+
+.lore-label {
+  font-size: 18px;
+  color: #b2ecfd;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+.lore-text-container {
+  /*max-width: 60%;*/
+  margin: 0.5rem 2%;
+  background-color: #000000aa;
+  padding: 30px;
+  box-shadow: 0px 0px 30px black;
+  z-index: 5;
+}
+
+.lore-intro {
+  font-size: 46px;
+  line-height: 46px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-left: 0;
+  /*color:#bae816*/
+  color: #c4be94;
+  font-family: 'Reaver', serif;
+  filter: drop-shadow(2px 2px 3px #000);
+  text-align: center;
+}
+
+.lore-body {
+  font-size: 24px;
+  line-height: 30px;
+  color: #C4BE94;
+  /*color: #888888;*/
+  /*text-shadow: 2px 2px 10px #000;*/
+  /*text-transform: uppercase;*/
+  font-family: 'Reaver', serif;
+  margin-top: 20px;
+  font-weight: 500;
+  line-break: 34px;
+  text-align: justify;
+  letter-spacing: 0px;
+  filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #000000);
+}
+
+.dota-copy {
+  font-size: 22px;
+  color: #ffffff99;
+  font-family: 'Radiance', sans-serif;
+  margin-top: 40px;
+  line-height: 28px;
+  text-shadow: 0px 0px 10px #000000;
+  background-color: #00000090;
+  padding: 20px 30px;
+}
+
+.couplet {
+  margin-top: 60px;
+}
+
+.first-line:first-letter {
+	color:	#888888; /*if no support for background-clip*/
+	text-shadow: 2px 2px 15px #00000000;
+	float: left;
+	font-size: 46px;
+	/*line-height: 30px;*/
+	/*padding: 8px;*/
+	margin-right: 0px;
+	padding-bottom: 8px;
+	margin-top: 10px;
+	/*border: solid 1px #E7F0E3;*/
+	font-family: "Reaver", serif;
+	transform: translateY(-12px);
+	color:	#271113; /*if no support for background-clip*/
+	float: left;
+	font-size: 70px;
+	line-height: 60px;
+	padding: 8px 15px;
+	margin-right: 20px;
+	background-color: #C4BE94;
+	transform: translateY(10px);
+}
+
+.desc-body {
+	font-size: 22px;
+	font-weight: 400;
+	color: #dedede;
+	text-shadow:  0px 0px 5px #000000;
+	/*font-family: "Reaver", serif;*/
+}
+
+.section-intro {
+  font-size: 46px;
+  line-height: 44px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-left: 0;
+  color: #BAE816;
+  font-family: 'Reaver', serif;
+  background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.section-label {
+  font-size: 26px;
+  line-height: 44px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-left: 0px;
+  color: #BAE816;
+  color: #fff;
+  font-family: 'Reaver', serif;
+  /*background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);*/
+	/*-webkit-background-clip: text;*/
+	/*-webkit-text-fill-color: transparent;*/
+	filter: drop-shadow(0px 0px 10px #000000);
+}
+
+.section-intro-sm {
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-left: 0px;
+  color: #BAE816;
+  font-family: 'Reaver', serif;
+  background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.howtoplay-desc {
+  padding-top: 130px ;
+}
+
+.rewards-section-spacer {
+	margin-top: 700px;
+}
+
+.reward-container {
+	position: relative;
+}
+
+.reward-name {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-top: -50px;
+  margin-left: 0px;
+  color: #BAE816;
+  font-family: 'Reaver', serif;
+  background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.reward-label {
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-left: 0px;
+  color: #ffffff90;
+  filter: drop-shadow(2px 2px 3px #000) drop-shadow(0px 0px 10px #53a146);
+}
+
+.reward-seasonal {
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+  margin-left: 0px;
+  color: #ffffff90;
+  display: inline-block;
+  padding: 0px 50px;
+  margin-top: 5px;
+  background-image: linear-gradient(to right, #9CC50C00, #9CC50C60, #9CC50C00);
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.reward-img {
+  width: 150%;
+  /*positon: absolute;*/
+  /*left: 50%;
+  transform: translate(-50%, 0%);*/
+  margin-left: 50%;
+	max-width: 600px;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.reward-costumes .reward-img {
+  width: 170%;
+  z-index: 2;
+}
+
+.reward-courier .reward-img {
+  width: 200%;
+}
+
+.reward-courier .reward-name {
+  margin-top: -150px;
+}
+
+.chest-extras-container {
+	position: relative;
+}
+
+.chest-extras-img {
+  width: 130%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.chest2 {
+  width: 100%;
+  max-width: 500px;
+}
+
+.altstyle-text .section-intro {
+  text-shadow: 0px 0px 5px #d36126;
+  color: #eeab60;
+}
+
+.wallpaper-intro {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px #ff7300;
+  font: 'Merriweather';
+  font-style: italic;
+}
+
+.ArcanaIncludesDetails .section-intro {
+  margin: 0;
+}
+
+.altstyle-text {
+  /*background-color: #00000090;*/
+  /*padding: 20px;*/
+  margin-top: 20px;
+}
+
+#Wallpaper ul {
+  /*padding-left: 20px;
+  padding-right: 20px;*/
+  padding: 0px;
+}
+
+.gallery {
+  position: relative;
+}
+
+.gallery a {
+  height: 100%;
+}
+
+.gallery li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 0px;
+}
+
+/*.lore-text:first-letter {*/
+	/*color:	#ffffff; !*if no support for background-clip*!*/
+	/*!*background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);*!*/
+	/*!*background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);*!*/
+	/*!*-webkit-background-clip: text;*!*/
+	/*!*-webkit-text-fill-color: transparent;*!*/
+	/*float: left;*/
+	/*font-size: 80px;*/
+	/*line-height: 60px;*/
+	/*margin-right: 20px;*/
+	/*padding-top: 12px;*/
+	/*font-weight: 900;*/
+	/*!*border: solid 1px #bc9950;*!*/
+/*}*/
+
+.lore-scene {
+  width: 100%;
+  height: 1000px;
+  perspective: 200px;
+  -webkit-perspective: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.lore-scene img {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+.lore-level {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#qop_arcana_video_embed {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  max-width: 200vw;
+}
+
+.comic-placeholder {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  box-shadow: 0px 0px 30px #000;
+}
+
+.comic-bg {
+  z-index: 10;
+  background-color: #111;
+  background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/qoparcana/qop_concept_bg2.jpg');
+	background-size: cover;
+}
+
+@keyframes float {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.parallax-group {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.emblemContainer {
+  padding: 16px;
+  bottom: 13%;
+  left: 0vw;
+  position: absolute;
+  width: 960px;
+  max-width: 80%;
+}
+
+.emblem {
+  position: absolute;
+  width: 200px;
+  z-index: 3;
+  margin-left: -16px;
+  left: 0;
+  top: 0;
+  max-width: 18vw;
+  min-width: 205px;
+  margin-top: -144px;
+}
+
+.emblemDesc {
+  padding: 0px;
+  margin-left: 76px;
+  z-index: 2;
+  position: relative;
+  user-select: initial;
+  padding-left: 108px;
+  padding-right: 16px;
+  background: linear-gradient(to right, #000a, #0006 85%, #0003 100%);
+}
+
+.wkArcanaAlt {
+  position: absolute;
+  bottom: -74px;
+  width: 1100px;
+  left: -188px;
+  user-select: none;
+  margin-left: -397px;
+  margin-left: 200px;
+}
+
+.fireblast {
+  position: absolute;
+  bottom: -30%;
+  right: -6%;
+  width: 100%;
+  animation: fireblastfloat 4s ease-in-out infinite;
+	z-index: 2;
+	transform-origin: 29% 0;
+}
+
+.skeletonstitle {
+  margin-top: 32px;
+  font-size: 32px;
+  text-shadow: 3px 3px 16px rgb(255, 115, 0);
+}
+
+.wavetitle {
+  margin-top: 0px;
+  font-size: 32px;
+  text-shadow: 3px 3px 16px rgb(255, 115, 0);
+}
+
+.skeletonsdesc {
+  margin-left: inherit;
+  margin-right: inherit;
+  margin-top: 16px;
+  margin-bottom: 64px;
+  max-width: 960px;
+}
+
+.skeletonsdesc .variant-body {
+  color: #d0d0d0;
+  position: relative;
+  z-index: 2;
+}
+
+#skeletonwavevideo {
+  margin-top: 0px;
+  max-width: 320px;
+}
+
+.skeletoncontainer {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fireblastfloat {
+  0% {
+		transform: translatey(0px) rotateZ(0deg);
+	}
+	50% {
+		transform: translatey(-10px) rotateZ(2deg);
+	}
+	100% {
+		transform: translatey(0px) rotateZ(0deg);
+	}
+}
+
+.tombstone {
+  max-width: 843px;
+  margin-top: 11px;
+  margin-left: -106px;
+  user-select: none;
+}
+
+.videframe {
+  position: absolute;
+  width: 130.5%;
+  left: -15.5%;
+  top: 0%;
+  user-select: none;
+}
+
+.level3 {
+  z-index: 15;
+  width: 100%;
+  height: 2000px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/rocks-3.png");
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transform: translateY(0px);
+  animation: float 6s ease-in-out infinite;
+	opacity: 0.6;
+}
+
+.level2 {
+  z-index: 15;
+  width: 100%;
+  height: 3500px;
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/rocks-2.png");
+  background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/rock_bg.png');
+  position: absolute;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	top: 0px;
+	opacity: 1;
+	top: -9vw;
+	min-width: 1440px;
+	user-select: none;
+}
+
+.level1 {
+  width: 91vw;
+  height: 2000px;
+  background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/rock_fg.png');
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  top: 10vw;
+  opacity: 1;
+  z-index: 16;
+  user-select: none;
+}
+
+.combo-frame {
+  background-color: #252c2c;
+  padding: 20px;
+  margin-bottom: 100px;
+  z-index: 10;
+  box-shadow: 0px 0px 80px #000;
+}
+
+.combo-info {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  max-width: 80%;
+}
+
+.combo-header {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 10px 10px 25px green;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+}
+
+.combo-vid {
+  height: 100%;
+  min-width: 800px;
+  position: absolute;
+  left: 12vw;
+}
+
+.combo-desc {
+  font-size: 18px;
+}
+
+.combo-content {
+  z-index: 10;
+  position: relative;
+}
+
+.combo-frame-top {
+	/*background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/ES_rocks.png');*/
+	background-size: 100%;
+	height: 100px;
+	width: 105%;
+	transform: translate(-20px, 80px);
+	background-repeat: no-repeat;
+	/*z-index: 100;*/
+	/*position: relative;*/
+}
+
+.header_bleed {
+	flex: 1;
+	position: relative;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/qoparcana/qop_header_leftbleed.png');
+	background-size: 100% 100%;
+	margin-left: 0;
+	margin-right: -2.5vw;
+	z-index: 5;
+}
+
+.left_bleed:after {
+
+	content: "";
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/qoparcana/left_cover.png');
+	background-size: 100% 100%;
+	width: 40vw;
+    height: 84vh;
+    position: absolute;
+    right: -21vw;
+}
+
+.header_image-video {
+  flex: 1;
+  /*max-width: 116vw;*/
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-width: 1840px;
+}
+
+.chest_video {
+  flex: 1;
+  /*max-width: 116vw;*/
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-width: 2000px;
+}
+
+/* No object-fit support in Edge so we have to get creative */
+.MSEdge .header_image_video {
+	transform: translateY(-5vh);
+}
+
+.rollingcloud {
+	width: 40vh;
+	position: absolute;
+	right: 0;
+	animation-name: cloudmotion01;
+	animation-duration: 7s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	z-index: 5;
+	user-select: none;
+}
+
+.cloud01a {
+	right: -25vh;
+}
+
+.cloud01b {
+	top: 15vh;
+	animation-duration: 6s;
+	filter: brightness(.14);
+	-webkit-filter: brightness(.14);
+}
+
+
+.cloud02a {
+	right: -25vh;
+	top: 1vh;
+	animation-duration: 6s;
+	filter: brightness(.14);
+	-webkit-filter: brightness(.14);
+}
+
+
+.cloud02b {
+	top: 15vh;
+	animation-duration: 8s;
+	filter: brightness(.14);
+	-webkit-filter: brightness(.14);
+}
+
+
+@keyframes cloudmotion01 {
+	0% {
+		opacity: 0;
+		transform: translateX(10vh) rotateZ(0deg);
+
+	}
+	30% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+
+		transform: translateX(-30vh) rotateZ(-30deg);
+	}
+}
+
+.right_bleed {
+	
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/qoparcana/qop_header_rightbleed.png');
+	margin-left: -2.5vw;
+	margin-right: 0;
+}
+
+.right_bleed:after {
+	content: "";
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wraithkingarcana/right_cover.png');
+	background-size: 100% 100%;
+  width: 913px;
+  height: 84vh;
+  position: absolute;
+	left: -428px;
+	right: initial;
+}
+
+.hero-bg {
+	height: 63vh;
+	height: 75vh;
+	/*height: 2000px;*/
+	width: 100%;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+  justify-content: center;
+	/*background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/wr_header.jpg');*/
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center -100px;
+}
+
+.feature-logo {
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+	top: 55vh;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+}
+
+/* .feature-img {
+	position: absolute;
+	width: 80%;
+	max-width: 700px;
+	bottom: -150px;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+} */
+
+/* 
+.feature-img {
+	position: absolute;
+	width: 80%;
+	max-width: 800px;
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+} */
+
+.feature-img {
+	position: absolute;
+	width: 80%;
+	max-width: 700px;
+	top: -100px;
+	left: 50%;
+	z-index: 3;
+	transform: translateX(-50%) translateY(0%);
+}
+
+.wave-bg {
+	/*background-color: red;*/
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	z-index: 1000;
+	top: 220px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_streamer.png');
+	background-size: auto 100%;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	pointer-events: none;
+	
+}
+
+
+
+.title-bg {
+	width: 100vw;
+	/*max-height: 34vh;*/
+	max-width: 1100px;
+	/*min-width: 100%;*/
+	overflow-x: hidden;
+	z-index: 2;
+	animation: fade-in 2s ease-in-out;
+	object-position: center;
+	object-fit: contain;
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(0, 0, 0, 0)), color-stop(80%, rgba(0, 0, 0, 0.7)), color-stop(100%, rgba(0, 0, 0, 1)));*/
+	user-select: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+	top: -130px;
+	pointer-events: none;
+}
+
+.footer-logo-bg {
+	width: 100%;
+	max-width: 600px;
+	margin-bottom: -10px;
+}
+
+.ru-logo {
+	max-width: 800px;
+}
+
+
+.feature_subhead {
+  pointer-events: none;
+	text-transform: uppercase;
+	font-size: 40px;
+	letter-spacing: 5px;
+	font-weight: bold;
+	color: #fefefe99;
+	margin-top: 5px;
+	margin-left: 20px;
+	position: absolute;
+	text-align: center;
+	font-family: "Reaver", serif;
+	left: 50%;
+	width: 100%;
+	z-index: 5;
+	top: 250px;
+	transform: translateX(-50%) translateY(0%);
+}
+
+.feature_subhead span {
+
+	/*color: #f5e7ce;*/
+	font-weight: bold;
+	/*font-size: 30px;*/
+	filter: blur(1px);
+	
+	font-family: "Reaver", serif;
+	background: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+@keyframes letter-a {
+	0% {
+	  transform: rotate(0deg) scale(1.5);
+	  opacity: 0;
+	}
+	100% {
+	  transform: rotate(13deg) scale(1.0);
+	  opacity: 1;
+	}
+  }
+
+  @keyframes letter-b {
+	0% {
+	  transform: rotate(0deg) scale(1.5);
+	  opacity: 0;
+	}
+	100% {
+	  transform: rotate(-13deg) scale(0.8);
+	  opacity: 1;
+	}
+  }
+
+  @keyframes letter-c {
+	0% {
+	  transform: rotate(0deg) scale(1.5);
+	  opacity: 0;
+	}
+	100% {
+	  transform: rotate(5deg) scale(1.2);
+	  opacity: 1;
+	}
+  }
+
+  @keyframes letter-d {
+	0% {
+	  transform: rotate(0deg) scale(1.5);
+	  opacity: 0;
+	}
+	100% {
+	  transform: rotate(1deg) scale(1);
+	  opacity: 1;
+	}
+  }
+
+
+.char1 {
+	display: inline-block;
+	transform: rotate(13deg) scale(1.0);
+	opacity: 1;
+
+	animation: 3s ease-out 0s 1 letter-a;
+}
+
+.char2 {
+	display: inline-block;
+	transform: rotate(-13deg) scale(0.8);
+	opacity: 1;
+
+	animation: 3s ease-out 0s 1 letter-b;
+}
+
+.char3 {
+	display: inline-block;
+	transform: rotate(5deg) scale(1.2);
+	  opacity: 1;
+
+	animation: 3s ease-out 0s 1 letter-c;
+}
+
+.char4 {
+	display: inline-block;
+	transform: rotate(1deg) scale(1);
+	opacity: 1;
+
+	animation: 3s ease-out 0s 1 letter-d;
+}
+
+
+/* .wave-bg {
+	//background-color: red;
+	width: 100%;
+	height: 500px;
+	position: absolute;
+	z-index: -1;
+	bottom: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/wave.png');
+	background-size: contain;
+	background-position: bottom;
+	background-repeat: repeat-x;
+	
+} */
+
+
+.parallax_map_section_img
+{
+	width: 100%;
+}
+
+.hero-buttons {
+/*opacity: 0.5;
+	pointer-events: none;*/
+}
+
+.BP_subhead {
+	text-transform: uppercase;
+	font-size: 26px;
+	letter-spacing: 5px;
+	font-weight: normal;
+	color: #fefefe;
+	margin-top: 5px;
+}
+
+.BP_subhead span {
+
+	color: #f5e7ce;
+	font-weight: bold;
+}
+
+
+.overview-bg {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/video-bg3334jer.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #000000;
+}
+
+.spacer-sm {
+	margin-top: 20px;
+}
+
+.spacer-md {
+	margin-top: 50px;
+}
+
+.spacer-lg {
+	margin-top: 100px;
+}
+
+.spacer-xl {
+	margin-top: 150px;
+}
+
+.spacer-xxl {
+	margin-top: 250px;
+}
+
+.padding-sm {
+	padding: 20px 0px;
+}
+
+.padding-md {
+	padding: 50px 0px;
+}
+
+.padding-lg {
+	padding: 100px 0px;
+}
+
+.padding-xl {
+	padding: 150px 0px;
+}
+
+.padding-xxl {
+	padding: 250px 0px;
+}
+
+
+
+.spacer-bottom {
+	padding-bottom: 100px;
+}
+
+.spacer-xxl-bottom {
+	padding-bottom: 200px;
+}
+
+.spacer-xxxxl-bottom {
+	padding-bottom: 500px;
+}
+
+.spacer-xxl-top {
+	margin-top: 300px;
+}
+
+.spacer-xl-bottom {
+	padding-bottom: 150px;
+}
+
+.spacer-lg-bottom {
+	padding-bottom: 50px;
+}
+
+.spacer-md-bottom {
+	padding-bottom: 100px;
+}
+
+.spacer-md-top {
+	padding-top: 50px;
+}
+
+.spacer-sm-top {
+	padding-top: 20px;
+}
+
+
+.spacer-lg-top {
+	padding-top: 100px;
+}
+
+.spacer-xl-top {
+	padding-top: 200px;
+}
+
+.spacer-xxl-top {
+	padding-top: 300px;
+}
+
+ .overview_video {
+	 padding: 100px 0px;
+ }
+
+ .video_box {
+	 box-shadow: 0px 0px 40px #000000;
+	 z-index: 10;
+	 user-select: none;
+ }
+
+ .diretide-label {
+	 letter-spacing: 3px;
+	 font-size: 20px;
+	 font-weight: 200;
+	 color: #ffffffaa;
+	 text-transform: uppercase;
+	 text-shadow: 0px 0px 10px #53A146, 0px 0px 10px #53A146, 0px 0px 10px #53A146, 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+ .diretide-desc {
+	font-size: 22px;
+	color: #ffffff;
+	text-shadow: 0px 0px 10px #53A146, 0px 0px 10px #53A146, 0px 0px 10px #53A146, 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.customgame-intro {
+	margin-top: 200px;
+}
+
+.customgame-logo-bg {
+	max-width: 400px;
+	margin-top: -30px;
+}
+
+.lore-bg {
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	overflow: hidden;
+	background-color: #000000;
+	/*background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide-bg.jpg');*/
+	background-size: cover;
+	background-position: center top;
+	overflow: visible;
+}
+
+.lore-bg-img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-width: 2200px;
+	z-index: -1;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	overflow: hidden;
+	background-color: #000000;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide-bg-lore.jpg');
+	background-size: cover;
+	background-position: center top;
+	overflow: visible;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+	
+}
+
+.absolute-bg {
+	position: absolute;
+	background-color: black;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	transform: translateZ(-.11px) scaleX(2) scaleY(1.02)
+}
+
+.absolute-bg-bottom {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+}
+
+.lore-content {
+	z-index: 10;
+	position: relative;
+	padding: 250px 0px 0px 0px;
+}
+
+.lore-top {
+	position: relative;
+}
+
+
+.lore-image-container {
+	position: absolute;
+	top: 65px;
+	left: 32vw;
+}
+
+.model-contain {
+	width: 100%;
+	background-color: black;
+	max-width: 2200px;
+	position: absolute;
+	height: 100%;
+	left: 0;
+	right: 0;
+}
+
+.customgame-bg {
+	background-color: #000000;
+	overflow: hidden;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/custom_game_diretide.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 800px;
+	/*max-width: 2000px;*/
+	position: relative;
+	/*border-top: 2px solid orange;*/
+	border-bottom: 2px solid #BAE816;
+	z-index: 1000;
+}
+
+.bottomsection-bg {
+	background-color: #000000;
+	overflow: hidden;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/footer_bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	position: relative;
+	border-top: 2px solid #BAE816;
+}
+
+.altstyle-bg {
+	background-color: #020202;
+	overflow: hidden;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/altstyle-bg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	min-height: 800px;
+	position: relative;
+	/*border-top: 2px solid orange;*/
+	border-bottom: 2px solid #BAE816;
+}
+
+.candy-bg {
+	background-color: #020202;
+	overflow: hidden;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/rewards_bg.jpg');
+	background-size: 100% auto;
+	background-repeat: repeat-y;
+	background-position: center top;
+	min-height: 800px;
+	position: relative;
+	/*border-top: 2px solid orange;*/
+	border-bottom: 2px solid #BAE816;
+}
+
+.chest-bg {
+	/*background-color: #020202;*/
+	overflow: hidden;
+	/*background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/altstyle-bg.jpg');*/
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-height: 800px;
+	position: relative;
+	
+}
+
+.altstyle-top {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/fade-top.png');
+	background-position: center top;
+	background-repeat: repeat;
+
+}
+
+.altstyle-bottom {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/fade-bottom.png');
+	background-position: center bottom;
+	background-repeat: repeat;
+
+}
+
+.diretide-divider-top {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_divider_top.png');
+	background-position: center top;
+	background-repeat: repeat-x;
+	z-index: 10;
+}
+
+.diretide-divider-bottom {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_divider.png');
+	background-position: center bottom;
+	background-repeat: repeat-x;
+	z-index: 10;
+}
+
+.lore-img {
+	position: absolute;
+}
+
+.lore-overlay {
+	position: absolute;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/lore-overlay.png');
+	background-size: 160%;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+
+
+}
+.lore-spacer {
+	padding-top: 450px;
+	padding-bottom: 0px;
+}
+
+.lore-img.lore1 {
+	left: -250px;
+	top: -100px;
+	width: 500px;
+	z-index: -1;
+}
+
+.lore-img.lore2 {
+	right: -450px;
+	top: -100px;
+	width: 700px;
+}
+
+.lore-img.lore3 {
+	bottom: -400px;
+	left: -50px;
+	width: 95vw;
+	max-width: 1200px;
+	z-index: 10;
+	display:none;
+
+}
+
+/* .lore-img.lore4 {
+	bottom: -300px;
+	width: 80vw;
+	right: 0px;
+	max-width: 1300px;
+
+} */
+
+.lore-img.lore4 {
+	bottom: 0px;
+	width: 120%;
+	max-width: 1500px;
+	position: relative;
+	padding-bottom: 0px;
+	transform: translateX(-50%) translateY(0%);
+
+}
+
+
+.attack-section {
+	margin-bottom: 100px;
+}
+
+.bullet {
+	padding: 15px 0px;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
+.feature-images {
+	margin-top: 15px;
+}
+
+.sfx-contain {
+	vertical-align: center;
+}
+
+.model-sfx {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 2px;
+	letter-spacing: 0.5px;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 4px 0px;
+	border: 1px solid transparent;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+	margin-top: 10px;
+}
+
+.model-sfx:hover {
+	/*border: 1px solid #2ce2e2;*/
+}
+
+.feature_icons {
+	height: 120px;
+	float: left;
+	margin: 0px 10px 10px 0px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.item_icons {
+	float: left;
+	margin: 0px 10px 10px 0px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.blink_icons {
+	float: left;
+	margin: 10px 10px 10px 0px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.voice-line {
+	color: #ffffff;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+	font-weight: normal;
+}
+
+.channel_bar {
+	max-height: 150px;
+	max-width: 100%;
+}
+
+.sfx-icn {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 10px;
+	transform: translateY(0px);
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wraithkingarcana/play-icn.png");
+	background-size: 100%;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+}
+
+.model-sfx:hover .voice-line {
+	/*color: #ffa600;*/
+	
+}
+
+.model-sfx:hover .sfx-icn {
+	/*background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wraithkingarcana/play-icn-active.png");*/
+
+}
+
+.model-sfx:active {
+	/*background-color: rgba(255,255,255,0.1);*/
+	/*border: 1px solid #2ce2e2;*/
+}
+
+
+.model-sfx:hover {
+	opacity: 0.8;
+
+}
+
+.model-sfx:focus svg {
+	
+}
+
+
+
+.video-play {
+	font-size: 14px;
+	color: #999999;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.model-bg {
+	/*background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/planetfall/video-bg3334jer.jpg");*/
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+	position: relative;
+	background-color: black;
+}
+
+.model-headline {
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 800;
+	line-height: 34px;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+	text-shadow:  3px 3px 20px rgb(255, 123, 0);
+}
+
+.model-line {
+	color: #999999;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+.feature-headline {
+	/*text-transform: uppercase;*/
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 30px;
+	letter-spacing: 1px;
+	/*text-transform: uppercase;*/
+	text-shadow:  0px 0px 5px #000000;
+	/* background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/text_bg.jpg');;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent; */
+	color: #ffffff;
+}
+
+.feature-line {
+	color: #999999;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+
+#Footer .Inner
+{
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/700/footer.jpg' );
+	background-color: #000000;
+	height: 287px;
+	background-position: center;
+
+}
+
+.ability_info {
+	background-color: #030303;
+	margin-bottom: 80px;
+}
+
+#FooterBullet {
+	width: 87px;
+	height: 80px;
+	user-select: none;
+
+	margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+#FooterBullet:hover
+{
+	filter: brightness(1.1);
+}
+
+.footer {
+	background-color: #000000;
+	width: 100%;
+	padding-top: 30px;
+	height: 230px;
+}
+
+#PageFooter {
+	width: 100%;
+	background-color: #000000;
+	padding: 30px 0px;
+
+}
+
+.footer-logo {
+	height: 30px;
+	width: auto;
+	margin: 0px 20px;
+}
+
+#footer-logo {
+	width: 100%;
+}
+
+.footer-line {
+	font-size: 13px;
+	line-height: 20px;
+	color: #666666;
+	margin-top: 10px;
+}
+
+.main-video {
+	z-index: -1;
+}
+
+.attack-img {
+	width: 100%;
+	max-width: 1800px;
+	min-width: 1200px;
+	height: 1200px;
+	/*background-color: red;*/
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/wr-techies-web.png' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: -1;
+	left: -50px;
+	top: -50px;
+}
+
+
+.wr-ult-img {
+	width: 600px;
+	height: 800px;
+	/*background-color: red;*/
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/wr_ult.png' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: -1;
+	right: -200px;
+	top: -50px;
+}
+
+
+
+.altstyle-img {
+	width: 400px;
+	height: 400px;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 1;
+
+}
+
+.altstyle-img2 {
+	width: 1200px;
+	height: 800px;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 1;
+	right: -500px;
+	top: -50px;
+	
+}
+
+.howtoplay-section {
+	position: relative;
+}
+
+.mobile-howtoplay {
+	display: none;
+}
+
+.howtoplay-img {
+	/* position: absolute;
+	top: 25%;
+	transform: translateY(-25%) translateX(0%);
+	overflow-x: hidden;
+	max-width: 100%; */
+	width: 120%;
+}
+
+
+
+.invoker-img {
+	width: 100%;
+	/*background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	max-width: 1240px;
+	min-width: 1000px;
+	left: 50%;
+	transform: translateX(-50%) translateY(0%);
+	overflow-x: hidden;
+	top: 0px;
+
+}
+
+.invoker-orbs {
+	animation: float 6s ease-in-out infinite;
+}
+
+.immortals-img {
+	overflow: visible;
+	position: relative;
+}
+
+.chest-rewards {
+	width: 100%;
+	/*background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+	bottom: 0px;
+	z-index: 300;
+	text-align: center;
+	position: relative;
+}
+
+.chest-rewards.aura {
+	width: 100%;
+	/*background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+	bottom: 0px;
+	z-index: 300;
+	text-align: center;
+	position: absolute;
+}
+
+.aura {
+
+}
+
+.snapfire {
+	left: -50px;
+	width: 250%;
+	bottom: 30px;
+	z-index: 300;
+}
+
+.sniper {
+	right: 200px;
+	width: 300%;
+	bottom: 0px;
+	z-index: 300;
+}
+
+.juggernaut {
+	left: -150px;
+	width: 250%;
+	bottom: 0px;
+	z-index: 300;
+}
+
+.slark {
+	right: 200px;
+	width: 230%;
+	bottom: 0px;
+	z-index: 300;
+}
+
+.chest-key-container {
+	background-image: linear-gradient(to right, #9CC50C00, #9CC50C90, #9CC50C00);
+	/*-webkit-mask-image: linear-gradient(to left, transparent 0%, black 100%, transparent 0%);*/
+  /*mask-image: linear-gradient(to left, transparent 0%, black 100%, transparent 0%);*/
+	padding: 20px 0px;
+	overflow: visible;
+}
+
+.key-title {
+	font-size: 20px;
+	letter-spacing: 3px;
+	font-weight: 600;
+	margin-bottom: 0px;
+	text-transform: uppercase;
+	margin-left: 0px;
+	color: #ffffff;
+	font-family: "Reaver", serif;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+}
+
+.key-img {
+	
+	/*background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-wr-arrow.png' );*/
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	min-height: 200px;
+	right: 0px;
+	top: -50px;
+	overflow: visible;
+	z-index: 10;
+	text-align: center;
+}
+
+.tier-top {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0px;
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/wrarcana/fade-top.png');
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+.chest-tier5 .tier-top {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/top-tier5.png');
+}
+.chest-tier4 .tier-top {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/top-tier4.png');
+}
+.chest-tier3 .tier-top {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/top-tier3.png');
+}
+.chest-tier2 .tier-top {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/top-tier2.png');
+}
+.chest-tier1 .tier-top {
+	background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/top-tier1.png');
+}
+
+/* #TierTitle {
+	width: 608px;
+	height: 260px;
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier5.png");
+	background-size: 100%;
+	background-position: left center;
+	background-repeat: no-repeat;
+	//position: absolute;
+	margin-left: 50%;
+	transform: translateX(-50%) translateY(0%);
+	z-index: 100;
+	margin-bottom: -20px;
+} */
+
+#TierTitle {
+	width: 400px;
+	height: 260px;
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier5.png");
+	background-size: 100%;
+	background-position: left center;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+	left: 0px;
+	top: 10px;
+	pointer-events: none;
+}
+
+.chest-tier5 #TierTitle {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier5.png");
+}
+
+.chest-tier4 #TierTitle {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier4.png");
+}
+
+.chest-tier3 #TierTitle {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier3.png");
+}
+
+.chest-tier2 #TierTitle {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier2.png");
+}
+
+.chest-tier1 #TierTitle {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/flag-tier1.png");
+}
+
+
+/* 
+#TierTitleText {
+	position: absolute;
+	top: 38%;
+	left: 220px;
+	line-height: 200%;
+	font-family: "Reaver", serif;
+	font-size: 34px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #000000;
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#TierTitleText span {
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	display: inline-block;
+	transform: translateY(-10px);
+	opacity: 0.8;
+} */
+
+#TierTitleText {
+	position: absolute;
+	top: 39%;
+	left: 130px;
+	line-height: 200%;
+	font-family: "Reaver", serif;
+	font-size: 34px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 5px #000000;
+	float: left;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+#TierTitleText span {
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	display: inline-block;
+	transform: translateY(-10px);
+	opacity: 0.8;
+}
+
+.chest-tier5 #TierTitleText, .chest-tier5 #LevelFlagText span, .chest-tier5 .chest-reward-label-tier {
+	color: #FFDCC9;
+	text-shadow: 2px 2px 5px #00000090, 0px 0px 30px #913400;
+}
+
+.chest-tier4 #TierTitleText, .chest-tier5 #LevelFlagText span, .chest-tier4 .chest-reward-label-tier {
+	color: #F5E4FF;
+	text-shadow: 2px 2px 5px #00000090, 0px 0px 30px #0d1fbe;
+}
+
+.chest-tier3 #TierTitleText, .chest-tier5 #LevelFlagText span, .chest-tier3 .chest-reward-label-tier {
+	color: #D5F0FF;
+	text-shadow: 2px 2px 5px #00000090, 0px 0px 30px #12502a;
+	top: 39%;
+}
+
+.chest-tier2 #TierTitleText, .chest-tier5 #LevelFlagText span, .chest-tier2 .chest-reward-label-tier {
+	color: #E0FFD5;
+	text-shadow: 2px 2px 5px #00000090, 0px 0px 30px #3f0d61;
+	top: 39%;
+}
+
+.chest-tier1 #TierTitleText, .chest-tier5 #LevelFlagText span, .chest-tier1 .chest-reward-label-tier {
+	color: #DFDFDF;
+	text-shadow: 2px 2px 5px #00000090, 0px 0px 30px #313131;
+	top: 39%;
+}
+
+
+.chest-tier5 {
+	position: relative;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier5-bg.jpg' );
+	background-size: auto 100%;
+	background-position: center left;
+	background-repeat: no-repeat;
+
+}
+
+.chest-tier5 .chest-rewards {
+
+	max-width: 800px;
+	right: -300px;
+	bottom: -100px;
+}
+
+.chest-tier4 {
+	position: relative;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier4-bg.jpg' );
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.chest-tier3 {
+	position: relative;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier3-bg.jpg' );
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.chest-tier2 {
+	position: relative;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier2-bg.jpg' );
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.chest-tier1 {
+	position: relative;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier1-bg.jpg' );
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.chest-reward-label {
+	width: 100%;
+	background-color: #333333;
+	padding: 20px 20px 20px 30px;
+	box-shadow: 0px 0px 40px #000000;
+}
+
+.chest-tier5 .chest-reward-label {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier5-backer.png' );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.chest-tier4 .chest-reward-label {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier4-backer.png' );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.chest-tier3 .chest-reward-label {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier3-backer.png' );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.chest-tier2 .chest-reward-label {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier2-backer.png' );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.chest-tier1 .chest-reward-label {
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/tier1-backer.png' );
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.chest-reward-label-tier {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffffff90;
+	font-weight: 600;
+	font-family: "Reaver";
+	letter-spacing: 2px;
+}
+
+.chest-reward-label-name {
+	font-size: 30px;
+	line-height: 34px;
+	text-shadow: 0px 0px 10px #000000;
+	color: #ffffff;
+	font-family: "Reaver", serif;
+	font-weight: 600;
+}
+
+.chest-reward-label-desc {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #ffffff90;
+}
+
+.emblem-colors {
+	/*background-color: #00000060;*/
+}
+
+.emblem-color-label {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #ffffff;
+	margin-top: 10px;
+	font-weight: semi-bold;
+}
+
+.emblem-color {
+	display: inline-block;
+	width: 40px;
+	height: 25px;
+	margin-right: 0px;
+	border: 2px solid #00000060;
+	box-shadow: 0px 0px 10px #000000;
+
+}
+
+.emblem-color.orange {
+	background-image: -webkit-linear-gradient(left, #EEEE6D, #E2B33E);
+}
+
+.emblem-color.red {
+	background-image: -webkit-linear-gradient(left, #FFAF55, #F16B3C);
+}
+
+.emblem-color.green {
+	background-image: -webkit-linear-gradient(left, #2BB8FC, #1FDBFF);
+}
+
+.emblem-color.blue {
+	background-image: -webkit-linear-gradient(left, #B9FE4B, #6AFE3C);
+}
+
+.attack-row {
+	min-height: 800px;
+}
+
+
+
+.attack-text {
+	/*background-color: #000000aa;*/
+	padding: 30px;
+	margin-top: 200px;
+	/*box-shadow: 0px 0px 30px black;*/
+	z-index: 15;
+	position: relative;
+	transform: translateY(180px);
+	/*background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/spin.png' );*/
+	/* background-size: contain;
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/ult-corner1.png' ), url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/ult-corner2.png' );
+  	background-position: right top, left bottom;
+	background-repeat: no-repeat, no-repeat; */
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/ult-top.png' );
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 70px 80px 30px 80px;
+	background-size: 100%;
+
+}
+
+.altstyle-text {
+	background-image: linear-gradient(to bottom, #00000080, #00000000);
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-corner.png' );
+	background-position: top left;
+	background-repeat: no-repeat;
+
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-corner.png' ), url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-corner2.png' );
+  	background-position: left top, right bottom;
+  	background-repeat: no-repeat, no-repeat;
+	padding: 80px 60px 80px 80px;
+	/*box-shadow: 0px 0px 30px black;*/
+	z-index: 15;
+	position: relative;
+	
+}
+
+.comic_arrows
+{
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	z-index: 99999;
+}
+
+.HideRightArrow #comic_right_arrow,
+.HideLeftArrow #comic_left_arrow
+{
+	display: none;
+}
+
+#comic_left_arrow
+{
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//qoparcana/arrow_left.png' );
+	left: 5px;
+}
+
+#comic_right_arrow
+{
+	background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//qoparcana/arrow_right.png' );
+	right: 5px;
+}
+
+.ArcanaDetailsFull {
+	width: 100%;
+	position: relative;
+	background-color: black;
+	/*margin-bottom: 150px;*/
+	z-index: 10;
+}
+
+.ArcanaDetails {
+	display: flex;
+	flex-direction: row;
+
+	width: 1440px;
+	max-width: 100vw;
+	align-items: stretch; 
+	position: relative;
+}
+
+.WKArcSittingModel {
+	flex: 1;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	
+}
+
+.WKSittingVideo {
+	position: absolute;
+	transform: translateX(300px);
+	/*margin-right: -28%;*/
+	height: 100%;
+}
+
+.ArcanaIncludes {
+	flex: 1;
+	position: relative;
+	padding-top: 85px;
+	min-width: 440px;
+}
+
+
+.ArcanaIncludesDetails {
+
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	justify-content: flex-start;
+	z-index: 3;
+	position: relative;
+	margin: 0px 0px 80px 0px;
+	max-width: 100%;
+}
+
+
+
+/*
+ * Safari decided to bust pure CSS parallax with iOS 13,
+ * but that means we need to undo all the scaling we did
+ * in order to account for the Z translations we have in place
+ * only when in iOS Safari, since those Z translations don't
+ * happen. Luckily we can use an @supports...
+ */
+ @supports (-webkit-touch-callout: none) {
+	/* CSS specific to iOS devices */
+	.parallax_front
+	{
+		transform: translateY(-74vh);
+	}
+
+	.parallax_bg
+	{
+		transform: none;
+	}
+
+	.parallax_mg
+	{
+		transform: translateY(-20vh);
+	}
+
+	.parallax_rocks {
+		transform: translateY(-35vh);
+	}
+
+	/* .parallax_map_section
+	{
+		transform: none;
+	}
+
+	#ParallaxMap_01 {
+		transform: translateY(-43%);
+	}
+
+	#ParallaxMap_02 {
+		transform: translateY(-12%);
+	}
+
+	#ParallaxMap_03 {
+		transform: translateY(38%);
+	}
+
+	#ParallaxMap_04 {
+		transform: translateY(50%);
+	} */
+
+	/* .absolute-bg {
+		transform: translateZ(-.11px) scaleX(2) scaleY(1.02)
+	} */
+}
+
+#infobar
+{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#top_qop_comic_text
+{
+    margin-top: 60px;
+    margin-bottom: 20px;
+	position: relative;
+	text-align: center;
+	font-family: 'Playfair Display';
+	letter-spacing: 2px;
+	font-size: 20px;
+}
+
+.comic_instructions
+{
+	margin-top: 35px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#links
+{
+	margin-bottom: 80px;
+	text-decoration: underline;
+}
+
+#instructions,
+#links
+{
+	position: relative;
+	text-align: center;
+	display: block;
+}
+
+#header_youtube_embed
+{
+    position: absolute;
+	max-width: 156vw;
+	width: 100%;
+	max-height: 85vw;
+	height: 80vh;
+	z-index: 102;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: black;
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	pointer-events:none;
+}
+
+#qop_arcana_video_embed
+{
+    position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+    width: 100%;
+    height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 2;
+	max-width: 80vw;
+}
+
+#header_black_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 101;
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-ms-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	pointer-events:none;
+
+}
+
+#header_youtube_embed.fade_in_header_video,
+#header_black_background.fade_in_header_video
+{
+	opacity: 1;
+	pointer-events:auto;
+}
+
+#header_youtube_embed.fade_out_header_video,
+#header_black_background.fade_out_header_video
+{
+	opacity: 0;
+}
+
+
+
+
+.main {
+	max-width: 1400px;
+	margin: auto;
+	padding: 0px 20px;
+  }
+  
+ 
+  
+  .galleryrow {
+	margin: 10px -16px;
+  }
+  
+  /* Add padding BETWEEN each column */
+  .galleryrow,
+  .galleryrow > .column {
+	padding: 8px;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+	float: left;
+	width: 20%;
+	display: none; /* Hide all elements by default */
+  }
+  
+  /* Clear floats after rows */ 
+  .galleryrow:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+  
+  /* Content */
+  .content {
+	background-color: #000000;
+	position: relative;
+	transition-duration: 0.2s;
+  }
+
+  .content:hover {
+	transform: scale(1.1);
+  }
+/* 
+  .gallery img {
+	height: 100%;
+	//border: 1px solid #75FEFE;
+	//box-shadow: 0 0 14px #75FEFE60;
+	transition-duration: 0.2s;
+}
+
+.gallery img:hover {
+	transform: scale(1.2);
+} */
+
+  .gallery-item-name {
+	  font-size: 12px;
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  font-weight: bold;
+	  width: 100%;
+	  background-color: #00000050;
+	  padding: 2px 0px;
+	  text-align: center;
+	  position: absolute;
+	  bottom: 0px;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+	display: block;
+  }
+  
+  /* Style the buttons */
+
+  .filter-container {
+	display: inline-block;
+    /* margin-left: 50%;
+	transform: translateX(-50%) translateY(0%); */
+	margin-top: 30px;
+  }
+
+
+  .btn {
+	border: none;
+	outline: none;
+	padding: 5px 16px;
+	border: 2px solid #BAE816;
+	cursor: pointer;
+	color: #BAE816;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-radius: 30px;
+	background-color: #00000000;
+	font-weight: 600;
+  }
+  
+  .btn:hover {
+	background-color: #BAE81620;
+  }
+  
+  .btn.active {
+	color: #333333;
+	background-image: -webkit-linear-gradient(left, #BAE816, #FFF8B9, #BAE816);
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 10px #53A146);
+	
+  }
+
+
+/* Grid Stuff */
+
+
+.grid-item {
+    display: inline-block;
+	position: relative;
+    overflow: hidden;
+    text-align: center;
+	width: 238px;
+	width: 24%;
+	padding: 5px;
+}
+.grid-item img{
+    width:100%;
+    height:100%;
+}
+.grid-item img:hover{
+    filter: none;
+}
+
+.isotope-pager .pager {
+    display: inline-block;
+}
+
+
+.filters {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 35px;
+	padding-top:20px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+
+.filters ul {
+    list-style: none;
+    padding: 10px 10px;
+    box-shadow: -1px 1px 11px rgba(0,0,0,.4);
+    margin: 0 40px;
+    border-radius: 30px;
+    background-color: #00000080;
+}
+
+.filters li {
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 600;
+	cursor: pointer;
+	border: 2px solid #BAE81600;
+}
+.filters li a{
+    color: #b6b6b6;
+    text-decoration: none;
+}
+.filters li a:hover{
+    color:#fff;
+}
+
+.filters li:hover {
+    box-shadow: -1px 1px 11px rgba(0,0,0,.4);
+    border-radius: 15px;
+}
+
+.filters li.active a{
+    color: #ffffff;
+    /* border: 2px solid #BAE816;
+    border-radius: 15px;
+    box-shadow: -1px 1px 11px rgba(0,0,0,.4);
+    padding: 10px 25px; */
+}
+
+.filters li.active {
+	border: 2px solid #BAE816;
+	border-radius: 15px;
+}
+
+
+
+.isotope-pager a{
+    margin: 6px 1px;
+    display: inline-block;
+    width: 50px;
+    /* height: 60px; */
+    line-height: 31px;
+    color: #b6b6b6;
+    font-weight: 600;
+    transition: 0.3s;
+    /* position: relative; */
+    /* padding-right: 26px; */
+    box-shadow: -1px 1px 11px rgba(0,0,0,.1);
+    border-radius: 25px;
+    background-color: #232323;
+    border: 0px solid #BAE816;
+    text-decoration:none;
+}
+
+.isotope-pager a:hover{
+    color: #fff;
+    border: .5px solid #ffeeac;
+    box-shadow: -1px 1px 10px 3px rgba(0,0,0,.1);
+}
+
+.isotope-pager .active{
+    color: #BAE816 !important;
+    box-shadow: -1px 1px 10px 5px rgba(0,0,0,.1);
+    border-radius: 25px;
+    background-color: #161616;
+    border: 2px solid #BAE816;
+}
+
+.isotope-pager .prev{
+    border-radius: 30px 0 0 30px;
+}
+
+.isotope-pager .next{
+    border-radius: 0 30px 30px 0;
+}
+
+.isotope-pager a::before,.isotope-pager a:after{
+    content: "";
+    position: absolute;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.isotope-pager .num::before,.next::before{
+    border-right: 20px solid #2c3e50;
+    right: 100%;
+}
+
+.isotope-pager .num:after,.prev:after{
+    border-right: 20px solid #f1f1f1;
+    right: 0;
+}
+
+.wallpaper {
+	width: 100%;
+	border: 1px solid #BAE816;
+	filter: drop-shadow(2px 2px 3px #000000) drop-shadow(0px 0px 8px #53A146);
+}
+
+
+
+.wallpaper-desc {
+	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #ffffff80;
+	margin-top: 20px;
+	font-family: "Reaver", serif;
+}
+
+.wallpaper-desc a {
+	background-color: #000000;
+	color: #ffffff;
+	font-weight: 600;
+	padding: 5px 15px;
+	border-radius: 5px;
+	font-family: "Reaver", serif;
+	margin: 5px;
+	text-align: center;
+	transition-duration: 0.2s;
+}
+
+.wallpaper-desc a:hover {
+	background-color: #333333;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+	color: white;
+	font-family: "Radiance";
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  font-size: 16px;
+  padding: 5px;
+	text-align: center;
+	pointer-events: none;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 1650px) { /* 960px */
+
+
+	.hero-bg {
+		background-size: auto 100%;
+		background-position: center top;
+	}
+
+	.altstyle-bg {
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center top;
+
+	}
+
+	
+	.howtoplay-desc {
+		padding-top: 100px;
+	}
+
+	.customgame-bg {
+		background-position: center -200px;
+	}
+
+
+	
+
+}
+
+@media only screen and (max-width: 1450px) { /* 960px */
+	.combo-vid {
+		left: -30%;
+	}
+
+	.hero-space {
+		height: 40vw;
+	}
+
+	.title-bg {
+		/*bottom: 90px;*/
+	}
+
+	.rocks_front {
+		bottom: -100px;
+	}
+
+	.variant {
+		transform: translateY(0px);
+		width: 150%;
+	}
+
+	.immortal-img {
+		top: -100px;
+	}
+
+	.level1 {
+		top: 50px;
+	}
+
+	.hero-bg {
+		background-size: auto 100%;
+		background-position: center top;
+	}
+
+	.howtoplay-desc {
+		padding-top: 60px;
+	}
+
+	.customgame-bg {
+		background-position: center -100px;
+	}
+
+	.juggernaut {
+		right: 250px;
+	}
+
+	.slark {
+		right: 200px;
+	}
+
+
+	.customgame-bg {
+		background-position: center top;
+	}
+
+
+	
+	
+	.lore-img.lore3 {
+		bottom: -600px;
+		left: -250px;
+		width: 95vw;
+		max-width: 1700px;
+	
+	}
+
+	
+
+
+
+}
+
+@media only screen and (min-width: 1450px) {
+	.lore-image-container {
+		left: 51%;
+	}
+
+	.lore-bg {
+		
+	}
+
+	.customgame-bg {
+		background-position: center -200px;
+	}
+
+
+
+	
+
+	
+}
+
+@media only screen and (max-width: 1150px) { /* 960px */
+	.hero-space {
+		/*height: 600px;*/
+	}
+
+	.combo-vid {
+		left: -50%;
+	}
+	
+
+	.rocks_front {
+		bottom: -60px;
+	}
+
+	.variant {
+		transform: translateY(0px);
+		width: 150%;
+	}
+
+	.level1 {
+		top: 250px;
+	}
+
+	#SectionLg, #SectionLgBtm {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
+		height: 250px;
+	}
+
+	.header_image_video {
+		transform: translateY(0px);
+	}
+
+	#RocksLeft, #RocksLeftFooter, #RocksRight, #RocksRightFooter {
+		height: 349px;
+	}
+
+	.hero-bg {
+		background-size: auto 100%;
+		background-position: center top;
+	}
+
+	.altstyle-img {
+	
+		right: -700px;
+		top: 0px;
+	}
+
+	.lore-intro {
+		font-size: 36px;
+		line-height: 40px;
+	}
+
+	.section-intro {
+		font-size: 36px;
+		line-height: 40px;
+		margin: 0 auto;
+	}
+
+	.lore-top {
+		padding: 200px 0px 200px 0px;
+	}
+
+	.col-6.attack-text {
+		width: 100%;
+	}
+
+	.attack-text {
+		padding: 80px 100px;
+	}
+
+	.attack-img {
+		/*max-width: 1000px;*/
+		min-width: 1000px;
+		left: -50px;
+		top: -100px;
+		/*height: 1200px;*/
+	}
+
+	.howtoplay-desc {
+		padding-top: 0px;
+	}
+
+
+
+	.customgame-bg {
+		background-position: center 0px;
+	}
+	
+}
+
+@media only screen and (max-width: 900px) {
+	
+
+	/* No object-fit support in Edge so we have to get creative */
+	.MSEdge .header_image_video {
+		transform: translateY(-10vh);
+	}
+
+	#AlternateStyleDetailsContainer {
+		padding: 3.5%;
+	}
+
+	#AlternateStyleDetails {
+		flex-direction: column;
+		padding: 3.5%;
+	}
+
+	.DetailsLeft {
+		justify-content: space-between;
+		margin-right: 0;
+	}
+
+	.DetailsRight {
+		margin-top: 32px;
+	}
+
+	.DetailsRight {
+		z-index: 2;
+	}
+	
+	.emblemContainer
+	{
+		z-index: 2;
+    	max-width: calc( 100% - 32px);
+    	bottom: 5%;
+	}
+
+	.wkArcanaAlt {
+		right: 0px;
+	    z-index: -1;
+	    transform: scale(.9) translateX(12%) translateY(21%);
+	    min-width: 842px;
+	}
+
+	.lore-image-container {
+		left: 19%;
+		top: 16%;
+		filter: brightness(0.5);
+		-webkit-filter: brightness(0.5);
+	}
+
+	.lore-text-container {
+		max-width: 80%;
+	}
+
+	.lore-top {
+		padding: 100px 0px;
+	}
+
+	.altstyle-bg {
+		padding-top: 30px;
+	}
+
+	.altstyle-img { 
+	
+		z-index: 0;
+		
+	}
+
+	.altstyle-text {
+		padding: 60px;
+	}
+	
+	
+	.parallax_front {
+		transform: translateY(-73vh) translateZ(-0.15px) scale(1.15);
+	}
+
+	.header_fg {
+		min-width: 440px;
+	}
+
+	.header_front {
+		min-width: 1075px;
+	}
+
+	.subhead {
+		padding: 0 16px;
+		font-size: 24px;
+		margin-top: -30px;
+	}
+
+	.attack-img {
+		left: -150px;
+		top: -200px;
+	}
+	/*.WKSittingVideo {
+		position: absolute;
+		right: -134%;
+		max-width: initial;
+		min-height: 874px;
+	}*/
+
+	.juggernaut {
+		right: 200px;
+	}
+
+	.slark {
+		right: 100px;
+	}
+}
+
+@media only screen and (max-width: 720px) { /* 960px */
+	.hero-bg {
+		height: 50vh;
+		
+		background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_roshan_mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center top;
+	}
+	
+	.header_image_video {
+		display: none;
+	}
+
+	.customgame-bg {
+		background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/custom_game_diretide_mobile.jpg');
+		background-size: contain;
+	}
+
+	.WR_subhead {
+		margin-left: 0px;
+		margin-bottom: 0px;
+		bottom: 15px;
+		font-size: 14px;
+		letter-spacing: 3px;
+		text-align: center;
+	}
+
+	.hero-content {
+		bottom: 30px;
+	}
+
+	.subhead {
+		font-size: 16px;
+	}
+
+	.parallax_front {
+		transform: translateY(-75vh) translateZ(-0.15px) scale(1.15);
+	}
+
+	/* No object-fit support in Edge so we have to get creative */
+	.MSEdge .header_image_video {
+		transform: none;
+	}
+
+	#GradientOverlayBottom {
+		height: 42vh;
+		padding-top: 8vh;
+		margin-top: -30vh; /* Go to far and FF interprets this as a positive */
+		z-index: 100;
+	}
+
+	.lore-spacer {
+		padding-top: 100px;
+		padding-bottom: 0px;
+	}
+
+	.lore-bg-img {
+		background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide-bg-lore-mobile.jpg');
+	}
+
+	.wave-bg {
+		background-image: none;
+	}
+
+	.lore1 {
+		background-image: none;
+		display: none;
+	}
+
+	.lore2 {
+		background-image: none;
+		display: none;
+	}
+
+	.lore-img.lore4 {
+		transform: translateX(0px) translateY(0px);
+	}
+
+	#SectionLg, #SectionLgBtm {
+		height: 400px;
+	}
+
+	#RocksLeft, #RocksLeftFooter {
+		top: 50px;
+		display: none;
+	}
+
+	#RocksRight, #RocksRightFooter {
+		right: -100px;
+		display: none;
+	}
+
+	/* .title-bg {
+
+		width: 150vw;
+	
+	} */
+
+	.lore-top {
+		margin-top: 30px;
+		padding-bottom: 0px;
+	}
+
+	.hero-space {
+		/*height: 350px;*/
+	}
+
+	.subhead {
+		transform: translateY(0px);
+	}
+
+	.attack-section {
+		margin-top: 0px;
+		padding-top: 100px;
+	}
+
+	.playcontainer {
+		transform: translateY(-10px) scale(1.3);
+		cursor: pointer;
+	}
+	
+
+	
+	.attack-text,
+	.altstyle-text {
+		/*background-color: #00000099;*/
+		
+	}
+
+
+	.altstyle-img {
+		bottom: 0px;
+		left: -450px;
+		width: 800px;
+		height: 600px;
+		margin-top: 380px;
+		top: 50px;
+	}
+
+	.attack-img {
+		max-width: 500px;
+		min-width: 500px;
+		width: 500px;
+		height: 500px;
+		right: 0px;
+		left: -30px;
+		top: -80px;
+	}
+
+	.altstyle-bg {
+		background-position: bottom right;
+		background-image: url( 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images//wrarcana/altstyle-bg-mobile.jpg' );
+		background-size: 100% auto;
+		background-position: center bottom;
+	}
+
+
+	.lore-bg {
+		background-size: 100% auto;
+		background-position: center top;
+	}
+
+	.combo-vid {
+		width: 150%;
+		height: auto;
+		top: 0px;
+		min-height: auto;
+		left: 0px;
+	}
+
+	.included-content {
+		margin-top: 400px;
+	}
+
+	.variant-text {
+		padding: 100px 0px 50px 0px;
+	}
+
+	.variant {
+		width: 100%;
+		transform: translateY(-50px);
+	}
+
+	.immortal-img {
+		top: -150px;
+		max-width: 200px;
+		z-index: 1;
+		opacity: 0.7;
+	}
+
+	.lore-bg {
+		background-size: 100%;
+		background-color: black;
+	}
+
+	#Variant {
+		background-size: cover;
+
+	}
+
+	.level1 {
+		top: 450px;
+	}
+
+	.rocks_front {
+		bottom: 0px;
+	}
+
+	.lore-top {
+		padding: 50px 0px;
+	}
+
+	.footer-logo {
+		margin-bottom: 20px;
+	}
+
+	.lore-text-container {
+		max-width: 100%;
+	}
+
+	.lore-image-container {
+		left: -5%;
+		top: 4%;
+		filter: brightness(0.2);
+		-webkit-filter: brightness(0.2);
+	}
+
+	.parallax_mg {
+		transform: translateY(-15vh) translateZ(-0.35px) scale(1.35);
+	}
+		
+	.parallax_front {
+		transform: translateY(-51vh) translateZ(-0.15px) scale(1.15);
+	}
+
+	.header_fg {
+		min-width: 740px;
+	}
+
+	.header_front {
+		min-width: 1075px;
+	}
+
+	.WKSittingVideo {
+		height: auto;
+	}
+
+	.galllery img {
+		transform: translateX(0px);
+	}
+
+	.galllery img:hover {
+		transform: translateX(0px) translateY(0px);
+	}
+
+	.grid-item {
+		width: 400px;
+		width: 49%;
+	}
+
+	.candy-bg .spacer-lg-top,
+	.candy-bg .spacer-xl-top,
+	.chest-bg .spacer-xl-top {
+		padding-top: 0px;
+	}
+
+	.key-img {
+		display: none;
+	}
+
+	.mobile-howtoplay {
+		display: block;
+	}
+
+	.desktop-howtoplay {
+		display: none;
+	}
+
+	.play-trailer-btn {
+		top: 60px;
+	}
+
+	.feature-logo {
+		top: 60vh;
+	}
+
+	.feature-img {
+		top: -100px;
+	}
+
+	.customgame-intro {
+		margin-top: 0px;
+	}
+
+	.howtoplay-desc {
+		padding-top: 0px;
+	}
+
+	.rewards-section-spacer {
+		margin-top: 600px;
+	}
+
+	#TierTitle {
+		top: -40px;
+	}
+
+	.chest-rewards {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width: 600px) {
+	#AlternateStyleMapContainer {
+		min-height: 1120px;
+	}
+
+	.DetailsRight {
+		padding-bottom: 250px;
+
+		flex: unset;
+	}
+
+	.DetailsLeft {
+		justify-content: flex-start;
+		flex:unset;
+	}
+
+	.wkArcanaAlt {
+		left: -127px;
+		transform: scale(0.9) translateX(-4%) translateY(61%);
+		filter: brightness(1);
+		-webkit-filter: brightness(1);
+	}
+
+	.emblem {
+		left: -27vw;
+		filter: brightness(0.5);
+		-webkit-filter: brightness(0.5);
+		display: none;
+	}
+	.emblemDesc {
+		padding: 16px;
+		margin-left: 0;
+		background: #000a;
+	}
+
+	.lore-content > .spacer-bottom {
+		padding-bottom: 32px;
+	}
+
+	.skeletonstitle {
+		font-size: 28px;
+		text-align: center;
+	}
+
+	.DetailsLeft .variant-text {
+		padding-top: 10px;
+	}
+
+	.AlternateStyle .variant-label {
+		font-size: 16px;
+	}
+
+	.AlternateStyle .variant-intro {
+		line-height: 45px;
+		text-align: center;
+	}
+	.ArcanaDetailsFull {
+
+		margin-bottom: -64px;
+	}
+
+
+	
+	.ArcanaIncludesDetails {
+		padding: 10px;
+	}
+
+	/* .bullet {
+		width: 90%;
+	} */
+
+	.ArcanaDetails {
+		flex-direction: column;
+		display: block;
+		max-width: 99%;
+	}
+
+	.WKSittingVideo {
+		position: absolute;
+		transform: translateX(52px);
+		margin-right: -28%;
+		max-width: 137vw;
+	}
+	#GradientOverlayRight {
+		background-image: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 25%, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0));
+	}
+
+	.ArcanaIncludes {
+		margin-top: 85vw;
+		min-width: 240px;
+	}
+
+	.chest-rewards {
+		display: none;
+	}
+
+	
+
+}
+
+@media only screen and (max-width: 500px) {
+	#AlternateStyleMapContainer {
+		min-height: 1300px;
+	}
+
+	.wkArcanaAlt {
+		left: unset;
+		right: -86vw;
+	}
+
+	.attack-text {
+		padding: 60px 70px;
+	}
+}
+
+@media only screen and (max-width: 400px) { 
+
+	.altstyle-img {
+		top: 180px;
+	}
+
+	.WR_subhead {
+		bottom: 3px;
+	}
 }
