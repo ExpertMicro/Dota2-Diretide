@@ -2,13 +2,346 @@
 <html lang="en">
 <head>
   
+  <link rel="shortcut icon" href="http://www.dota2.com/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/css/static/comicviewer.css?v=6202792">
+  <link rel="stylesheet" href="https://cdn.cloudflare.steamstatic.com/apps/dota2/css/static/magnific-popup.css?v=6202792">
+  
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/style.css">
-  
+
+  <link rel="stylesheet" href="http://www.dota2.com/public/css/aos/aos.css?v=b6202792&l=brazilian&_cdn=cloudflare">
+
+  <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflTj3NPM/www-widgetapi.js" async></script>
+  <script src="http://youtube.com/iframe_api"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery-1.7.1.min.js?v=6202792"></script>
+  <script type="text/javascript">$J = jQuery;</script>
+  <script type="text/javascript" src="http://community.cloudflare.steamstatic.com/public/shared/javascript/shared_global.js?v=vQHFGRCkNXDV&l=brazilian&_cdn=cloudflare"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery-1.7.1.min.js?v=6202792"></script>
+  <script type="text/javascript">$J = jQuery;</script>
+  <script type="text/javascript" src="http://community.cloudflare.steamstatic.com/public/shared/javascript/shared_global.js?v=vQHFGRCkNXDV&l=brazilian&_cdn=cloudflare"></script>
+  <script type="text/javascript" src="http://www.dota2.com/public/javascript/aos/aos.js?v=.nZnBHIaNpp2P&_cdn=cloudflare"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/howler.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery-utils-0.8.5/jquery.utils.lite.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery.imagesloaded.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/spin.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/isotope.pkgd.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery.magnific-popup.min.js?v=6202792"></script>
+  <script type="text/javascript" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/javascript/static/jquery.lazy.min.js?v=6202792"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    videoId = 'qop_arcana_video_embed';
+    var tag = document.createElement('script');
+    tag.src = "//www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('qop_arcana_video_embed', {
+      playerVars: { 'rel': 0, 'autoplay': 0, 'controls': 1 },
+        videoId:  'Nr4C2Mb_Bao' ,
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      //Uncomment to autoplay function
+      //event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if(event.data === YT.PlayerState.ENDED)
+      {
+        fadeOutVideo();
+      }
+      else if( event.data === YT.PlayerState.PAUSED )
+      {
+        setTimeout(function()
+        {
+          if ( event.target.getPlayerState() == 2 )
+          {
+            fadeOutVideo();
+          }
+        }, 200)
+      }
+    }
+
+    function fadeOutVideo()
+    {
+      $( '#header_youtube_embed' ).removeClass( "fade_in_header_video" );
+      $( '#header_black_background' ).removeClass( "fade_in_header_video" );
+      $( '#header_youtube_embed' ).addClass( "fade_out_header_video" );
+      $( '#header_black_background' ).addClass( "fade_out_header_video" );
+    }
+
+    $(function()
+    {
+			let scrollRef = 0;
+			$('.page-contain').scroll(function(){
+					scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+			});
+
+      function PadWithZeroes( str )
+      {
+        while ( str.length < 3 ) str = '0' + str;
+          return str;
+        }
+
+        $( '.play-trailer-btn' ).on('click', function( e )
+        {
+          $( '#header_youtube_embed' ).addClass( "fade_in_header_video" );
+          $( '#header_black_background' ).addClass( "fade_in_header_video" );
+          $( '#header_youtube_embed' ).removeClass( "fade_out_header_video" );
+          $( '#header_black_background' ).removeClass( "fade_out_header_video" );
+          player.playVideo();
+        });
+
+    });
+        
+    $(function() {
+      $('.lazy').Lazy();
+    });
+
+    $(document).ready( function() {
+
+    var itemSelector = '.grid-item';
+
+    var $container = $('#container').isotope({
+        itemSelector: itemSelector,
+    });
+
+    //Ascending order
+    var responsiveIsotope = [
+      [480, 7],
+      [720, 10]
+    ];
+
+    var itemsPerPageDefault = 16;
+    var itemsPerPage = defineItemsPerPage();
+    var currentNumberPages = 1;
+    var currentPage = 1;
+    var currentFilter = '*';
+    var filterAtribute = 'data-filter';
+    var pageAtribute = 'data-page';
+    var pagerClass = 'isotope-pager';
+
+    function changeFilter(selector) {
+      $container.isotope({
+        filter: selector
+      });
+    }
+
+    function goToPage(n) {
+      currentPage = n;
+
+      var selector = itemSelector;
+      selector += ( currentFilter != '*' ) ? '['+filterAtribute+'="'+currentFilter+'"]' : '';
+      selector += '['+pageAtribute+'="'+currentPage+'"]';
+
+      changeFilter(selector);
+      $('.isotope-pager').children('a').each(function(i) {
+        if( $(this).attr( 'data-page' ) == n )
+        {
+          $(this).addClass('active');
+        }
+        else
+        {
+          $(this).removeClass('active');
+        }
+      });
+    }
+
+    function defineItemsPerPage() {
+      var pages = itemsPerPageDefault;
+
+      for( var i = 0; i < responsiveIsotope.length; i++ ) {
+        if( $(window).width() <= responsiveIsotope[i][0] ) {
+          pages = responsiveIsotope[i][1];
+          break;
+        }
+      }
+      return pages;
+    }
+
+    function setPagination() {
+      var SettingsPagesOnItems = function(){
+        var itemsLength = $container.children(itemSelector).length;
+        var pages = Math.ceil(itemsLength / itemsPerPage);
+        var item = 1;
+        var page = 1;
+        var selector = itemSelector;
+        selector += ( currentFilter != '*' ) ? '['+filterAtribute+'="'+currentFilter+'"]' : '';
+
+        $container.children(selector).each(function(){
+          if( item > itemsPerPage ) {
+            page++;
+            item = 1;
+          }
+          $(this).attr(pageAtribute, page);
+          item++;
+        });
+        currentNumberPages = page;
+
+    }();
+
+    var CreatePagers = function() {
+
+      var $isotopePager = ( $('.'+pagerClass).length == 0 ) ? $('<div class="'+pagerClass+'"></div>') : $('.'+pagerClass);
+
+      $isotopePager.html('');
+
+      for( var i = 0; i < currentNumberPages; i++ ) {
+        var $pager = $('<a href="javascript:void(0);" class="pager" '+pageAtribute+'="'+(i+1)+'"></a>');
+        $pager.html(i+1);
+
+        $pager.click(function(){
+        var page = $(this).eq(0).attr(pageAtribute);
+        goToPage(page);
+        });
+
+        $pager.appendTo($isotopePager);
+      }
+
+      $container.after($isotopePager);
+
+      }();
+
+      }
+
+      //Adicionando Event de Click para as categorias
+      $('.filters a').click(function(){
+        var filter = $(this).attr(filterAtribute);
+        currentFilter = filter;
+
+        setPagination();
+        goToPage(1);
+
+
+      });
+
+      //Evento Responsivo
+      $(window).resize(function(){
+          itemsPerPage = defineItemsPerPage();
+            setPagination();
+      });
+
+      $('.filter-button-group').on( 'click', 'li', function() {
+        var filterValue = $(this).attr('data-filter');
+        currentFilter = filterValue;
+        $('.grid').isotope({ filter: filterValue });
+        $('.filter-button-group li').removeClass('active');
+        $(this).addClass('active');
+        setPagination();
+        goToPage(1);
+      });
+            
+      $('.filter-button-group li').first().addClass('active');
+        setPagination();
+        goToPage(1);
+
+      $container.imagesLoaded().progress( function() {
+        setPagination();
+        goToPage(currentPage);
+      });
+
+
+      });
+
+
+      $(document).ready( function() {
+
+        // filter items on button click
+        $('.isotope-pager').on( 'click', 'a', function() {
+          var filterValue = $(this).attr('data-page');
+
+          $('.isotope-pager a').removeClass('active');
+          $(this).addClass('active');
+        });
+
+      })
+
+
+
+
+
+
+
+
+      $(document).ready(function(){
+        $('.popupimg').magnificPopup({
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            gallery:{
+              enabled:true
+            },
+
+            zoom: {
+              enabled: true,
+
+              duration: 300, // duration of the effect, in milliseconds
+              easing: 'ease-in-out', // CSS transition easing function
+
+              opener: function(openerElement) {
+
+                return openerElement.is('img') ? openerElement : openerElement.find('img');
+              }
+            }
+
+        });
+
+        $('.popupimg2').magnificPopup({
+          type: 'image',
+          mainClass: 'mfp-with-zoom',
+          gallery:{
+          enabled:true
+          },
+
+          zoom: {
+            enabled: true,
+
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
+
+            opener: function(openerElement) {
+
+              return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+          }
+
+        });
+
+        $('.popupimg3').magnificPopup({
+          type: 'image',
+          mainClass: 'mfp-with-zoom',
+          gallery:{
+            enabled:true
+          },
+
+          zoom: {
+            enabled: true,
+
+            duration: 300, // duration of the effect, in milliseconds
+            easing: 'ease-in-out', // CSS transition easing function
+
+            opener: function(openerElement) {
+
+              return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+          }
+
+        });
+      });
+
+  </script>
   <title>Dota 2 - Diretide</title>
 </head>
 <body>
@@ -210,7 +543,7 @@
     <div class="feature-logo">
       <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/diretide_logo_bg_en.png" alt="" class="title-bg">
       <div class="play-trailer-btn">
-        <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/play_btn_active.png" alt="">
+        <img class="play-btn" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/diretide2020/play_btn_active.png">
         <br>
         <div class="playtext">Assistir ao trailer</div>
       </div>
@@ -249,7 +582,7 @@
               </picture>
             </div>
           </div>
-          <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/give_diretide.png" alt="">
+          <img data-aos="fade-up" data-aos-duration="1000" class="lore-img lore4 aos-init" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/give_diretide.png">
         </div>
       </div>
     </div>
@@ -296,7 +629,7 @@
           <div class="col-6 howtoplay-section mobile-howtoplay">
             <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images//diretide2020/howtoplay-3.png" alt="" class="howtoplay-img fullwidth">
           </div>
-          <div class="col-6 center howtoplay-desc aos-init" data-aos="fade=up" data-aos-duration="1000">
+          <div class="col-6 center howtoplay-desc aos-init" data-aos="fade-up" data-aos-duration="1000">
             <div class="section-intro-sm">Sacie a fera</div>
             <div class="desc-body">
               A fome de Roshan não pode ser ignorada. Somente os caramelos nos seus bolsos e o seu espírito altruísta evitará a morte iminente.
@@ -1028,10 +1361,7 @@
     <div class="outer chest-tier5 padding-lg">
       <div class="tier-top"></div>
       <div id="TierTitle" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="500" class="aos-init">
-        <div id="TierTitleText" class="label-md">
-        Classe 5 
-        <span class="tier-rarity">Emblemas</span>
-        </div>
+        <div id="TierTitleText" class="label-md">Classe 5<span class="tier-rarity">Emblemas</span></div>
       </div>
 
       <div class="container">
@@ -1644,5 +1974,125 @@
       </div>
     </div>
   </div>
+
+  <script>
+    var bEdge = window.navigator.userAgent.indexOf('Edge') > -1;
+
+    /* Edge only suports object-fit on <img> tags, so need special handling for our videos in edge */
+    if (bEdge) {
+      document.body.className += ' MSEdge';
+    }
+
+    /* Edge also claims support for webm format but loads ours as a black video. Don't give Edge that option */
+    var videoConfig = {
+      'header_image_video': {
+        mp4: 'diretide_roshan.mp4',
+        webm: 'diretide_roshan.webm'
+      },
+      'chest-video': {
+        mp4: 'diretide_chest.mp4',
+        webm: 'diretide_chest.webm'
+      },
+      'tier5-aura': {
+        mp4:  '/immortals/emblem.mp4',
+        webm: '/immortals/emblem.webm'
+      },
+      'tier4-slark': {
+        mp4: '/immortals/slark.mp4',
+        webm: '/immortals/slark.webm'
+      },
+      'tier4-snapfire': {
+        mp4:  '/immortals/snapfire.mp4',
+        webm: '/immortals/snapfire.webm'
+      },
+      'tier4-jugg': {
+        mp4: '/immortals/juggernaut.mp4',
+        webm: '/immortals/juggernaut.webm'
+      },
+      'tier4-sniper': {
+        mp4: '/immortals/sniper.mp4',
+        webm: '/immortals/sniper.webm'
+      },
+      'tier3-bane': {
+        mp4: '/immortals/bane.mp4',
+        webm: '/immortals/bane.webm'
+      },
+      'tier3-grimstroke': {
+        mp4: '/immortals/grimstroke.mp4',
+        webm: '/immortals/grimstroke.webm'
+      },
+      'tier3-mars': {
+        mp4: '/immortals/mars.mp4',
+        webm: '/immortals/mars.webm'
+      },
+      'tier3-omniknight': {
+        mp4: '/immortals/omniknight.mp4',
+        webm: '/immortals/omniknight.webm'
+      },
+      'tier3-pa': {
+        mp4: '/immortals/pa.mp4',
+        webm: '/immortals/pa.webm'
+      },
+      'tier3-pl': {
+        mp4: '/immortals/pl.mp4',
+        webm: '/immortals/pl.webm'
+      },
+      'tier3-shaman': {
+        mp4: '/immortals/shadow_shaman.mp4',
+        webm: '/immortals/shadow_shaman.webm'
+      },
+      'tier3-undying': {
+        mp4: '/immortals/undying.mp4',
+        webm: '/immortals/undying.webm'
+      }
+    }
+
+    function fnBuildSource(strPath, strType) {
+      var source = document.createElement('source');
+      source.setAttribute('type', strType);
+      source.setAttribute('src', 'https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/diretide2020/' + strPath);
+
+      return source;
+    }
+
+    var bUseWebm = !bEdge;
+
+    Object.keys(videoConfig).forEach(function(key) {
+      var elem = document.querySelector('.' + key);
+      if (!elem) return;
+      var config = videoConfig[key];
+      if (bUseWebm && config.webm) {
+        elem.appendChild(fnBuildSource(config.webm, 'video/webm'));
+      }
+      else {
+        elem.appendChild(fnBuildSource(config.mp4, 'video/mp4'))
+      }
+    });
+
+  </script>
+
+  <script>
+    AOS.init({
+      //Global settings
+      disable: 'mobile',// accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded',//name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init',//class applied after initialization
+      animateClassName: 'aos-animate',//class applied on animation
+      useClassName: false,//if true, will add content of 'data-aos' as classes on scroll
+      disableMutationObserver: false,//disables automatic mutations detections (advanced)
+      debounceDelay: 50,//the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99,//the delay on throttle used while scrolling the page (advanced)
+
+
+      //Settings that can be overrriden on per-element basis, by 'data-aos-*' atributes:
+      offset: 120,//offset (in px) from the original trigger point
+      delay: 0,//values from 0 to 300, with step 50ms
+      duration: 400, //values from 0 to 3000, with step 50ms
+      easing: 'ease',//default easing form AOS animations
+      once: false,//whether animation should happen only once - while scrolling down
+      mirror: false,//whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom',//defines wich position of the element regarding to windown should trigger the animation
+    });
+  </script>
 </body>
 </html>
